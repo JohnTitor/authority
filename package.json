@@ -8,8 +8,9 @@
     "build": "astro build && jampack ./dist",
     "preview": "astro preview",
     "sync": "astro sync",
-    "lint": "biome lint ./",
-    "format": "biome format ./",
+    "lint": "biome lint --apply ./",
+    "lint-unsafe": "biome lint --apply-unsafe ./",
+    "format": "biome format --write ./",
     "ci": "biome ci ./"
   },
   "dependencies": {
