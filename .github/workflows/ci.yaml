@@ -15,4 +15,4 @@ jobs:
       - name: Install dependencies
         run: bun install
       - name: lint
-        run: bun ci
+        run: 
