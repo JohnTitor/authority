@@ -1,9 +1,9 @@
 import type { Site, SocialObjects } from './types';
 
 export const SITE: Site = {
-  website: 'https://oshino.meme', // replace this with your deployed domain
+  website: 'https://www.oshino.meme', // replace this with your deployed domain
   author: 'Yuki Okushi',
-  desc: 'Authority',
+  desc: '"I\'m not going to save you, just lending a hand. Only you can save yourself."',
   title: 'oshino.meme',
   ogImage: 'og.jpg',
   lightAndDarkMode: true,
