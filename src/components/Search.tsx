@@ -66,8 +66,9 @@ export default function SearchBar({ searchList }: Props) {
     if (inputVal.length > 0) {
       const searchParams = new URLSearchParams(window.location.search);
       searchParams.set('q', inputVal);
-      const newRelativePathQuery =
-        `${window.location.pathname}?${searchParams.toString()}`;
+      const newRelativePathQuery = `${
+        window.location.pathname
+      }?${searchParams.toString()}`;
       history.replaceState(history.state, '', newRelativePathQuery);
     } else {
       history.replaceState(history.state, '', window.location.pathname);
@@ -109,12 +110,12 @@ export default function SearchBar({ searchList }: Props) {
 
       <ul>
         {searchResults?.map(({ item, refIndex }) => (
-            <Card
-              href={`/posts/${slugify(item.data)}`}
-              frontmatter={item.data}
-              key={`${refIndex}-${slugify(item.data)}`}
-            />
-          ))}
+          <Card
+            href={`/posts/${slugify(item.data)}`}
+            frontmatter={item.data}
+            key={`${refIndex}-${slugify(item.data)}`}
+          />
+        ))}
       </ul>
     </>
   );

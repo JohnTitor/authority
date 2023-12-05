@@ -3,34 +3,20 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-AstroPaper is a minimal, responsive and SEO-friendly Astro blog theme. I designed and crafted this based on [my personal blog](https://satnaing.dev/blog).
+Yuki Okushi is a self-taught programmer with interests in FLOSS (Free/Libre and Open Source Software).
+He is mainly working on the Rust programming language as a contributor and a member of some teams/WGs.
 
-This theme is aimed to be accessible out of the box. Light and dark mode are supported by
-default and additional color schemes can also be configured.
+## Experience
 
-This theme is self-documented \_ which means articles/posts in this theme can also be considered as documentations. So, see the documentation for more info.
+### Open Source
+- May 2022-present: Kubernetes organization member
+- May 2022-present: LLVM committer
+- 2021-present: GNOME foundation member (translator)
+- 2019-present: Node.js organization member (moderation)
+- 2019-present: rust-lang organization member (various areas, check on GitHub)
 
-<div>
-  <img src="/assets/dev.svg" class="sm:w-1/2 mx-auto" alt="coding dev illustration">
-</div>
+### Work
 
-## Tech Stack
-
-This theme is written in vanilla JavaScript (+ TypeScript for type checking) and a little bit of ReactJS for some interactions. TailwindCSS is used for styling; and Markdown is used for blog contents.
-
-## Features
-
-Here are certain features of this site.
-
-- fully responsive and accessible
-- SEO-friendly
-- light & dark mode
-- fuzzy search
-- super fast performance
-- draft posts
-- pagination
-- sitemap & rss feed
-- highly customizable
-
-If you like this theme, you can star/contribute to the [repo](https://github.com/satnaing/astro-paper).  
-Or you can even give any feedback via my [email](mailto:contact@satnaing.dev).
+- May 2022-present: BluAge Corp.
+- Mar. 2021-Mar. 2022: Huawei Technologies Co., Ltd.
+- Apr. 2019-Oct. 2019: Vega corporation Co., Ltd.
