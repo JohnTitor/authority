@@ -1,7 +1,7 @@
 ---
 pubDatetime: 2022-12-23T00:00:00Z
 title: 'The state of @JohnTitor, 2022'
-featured: true
+featured: false
 tags:
   - report
 description: 'The state of @JohnTitor, 2022'
