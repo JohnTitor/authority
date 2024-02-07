@@ -28,7 +28,7 @@
     "typescript": "^5.2.2"
   },
   "devDependencies": {
-    "@astrojs/react": "3.0.9",
+    "@astrojs/react": "3.0.10",
     "@astrojs/sitemap": "3.0.5",
     "@astrojs/tailwind": "5.1.0",
     "@biomejs/biome": "1.5.3",
