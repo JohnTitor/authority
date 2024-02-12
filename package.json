@@ -14,7 +14,7 @@
     "ci": "biome lint ./ && biome format ./ && astro build"
   },
   "dependencies": {
-    "@astrojs/check": "0.5.2",
+    "@astrojs/check": "0.5.3",
     "@astrojs/rss": "4.0.5",
     "@resvg/resvg-js": "^2.4.1",
     "astro": "4.3.5",
