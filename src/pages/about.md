@@ -17,6 +17,6 @@ He is mainly working on the Rust programming language as a contributor and a mem
 
 ### Work
 
-- May 2022-present: BluAge Corp.
+- May 2022-present: Canary Inc.
 - Mar. 2021-Mar. 2022: Huawei Technologies Co., Ltd.
 - Apr. 2019-Oct. 2019: Vega corporation Co., Ltd.
