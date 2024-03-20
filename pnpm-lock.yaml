@@ -62,8 +62,8 @@ devDependencies:
     specifier: ^0.5.10
     version: 0.5.10(tailwindcss@3.4.0)
   '@types/github-slugger':
-    specifier: ^1.3.0
-    version: 1.3.0
+    specifier: ^2.0.0
+    version: 2.0.0
   '@types/react':
     specifier: ^18.2.22
     version: 18.2.59
@@ -1782,8 +1782,11 @@ packages:
   /@types/estree@1.0.5:
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
 
-  /@types/github-slugger@1.3.0:
-    resolution: {integrity: sha512-J/rMZa7RqiH/rT29TEVZO4nBoDP9XJOjnbbIofg7GQKs4JIduEO3WLpte+6WeUz/TcrXKlY+bM7FYrp8yFB+3g==}
+  /@types/github-slugger@2.0.0:
+    resolution: {integrity: sha512-z/FaJhjFPk5mtrsZWeqyvaJdcZKw6CVCTuynEMrcXtgyozN3yMrtL13xWv8uQV2bWtwSXkdiNM37HEKkEj9x1Q==}
+    deprecated: This is a stub types definition. github-slugger provides its own type definitions, so you do not need this installed.
+    dependencies:
+      github-slugger: 2.0.0
     dev: true
 
   /@types/hast@3.0.3:
