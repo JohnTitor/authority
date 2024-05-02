@@ -17,7 +17,7 @@
     "@astrojs/check": "0.5.10",
     "@astrojs/rss": "4.0.5",
     "@resvg/resvg-js": "^2.4.1",
-    "astro": "4.7.0",
+    "astro": "4.7.1",
     "fuse.js": "^7.0.0",
     "github-slugger": "^2.0.0",
     "remark-collapse": "^0.1.2",
@@ -28,7 +28,7 @@
     "typescript": "^5.2.2"
   },
   "devDependencies": {
-    "@astrojs/react": "3.3.1",
+    "@astrojs/react": "3.3.2",
     "@astrojs/sitemap": "3.1.4",
     "@astrojs/tailwind": "5.1.0",
     "@biomejs/biome": "1.5.3",
