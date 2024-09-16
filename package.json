@@ -15,9 +15,9 @@
   },
   "dependencies": {
     "@astrojs/check": "0.5.10",
-    "@astrojs/rss": "4.0.6",
+    "@astrojs/rss": "4.0.7",
     "@resvg/resvg-js": "^2.4.1",
-    "astro": "4.10.1",
+    "astro": "4.15.6",
     "fuse.js": "^7.0.0",
     "github-slugger": "^2.0.0",
     "remark-collapse": "^0.1.2",
@@ -28,8 +28,8 @@
     "typescript": "^5.2.2"
   },
   "devDependencies": {
-    "@astrojs/react": "3.5.0",
-    "@astrojs/sitemap": "3.1.5",
+    "@astrojs/react": "3.6.2",
+    "@astrojs/sitemap": "3.1.6",
     "@astrojs/tailwind": "5.1.0",
     "@biomejs/biome": "1.5.3",
     "@divriots/jampack": "^0.23.0",
