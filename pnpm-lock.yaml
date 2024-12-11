@@ -58,8 +58,8 @@ importers:
         specifier: 1.5.3
         version: 1.5.3
       '@divriots/jampack':
-        specifier: ^0.30.0
-        version: 0.30.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^0.32.0
+        version: 0.32.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@tailwindcss/typography':
         specifier: ^0.5.10
         version: 0.5.15(tailwindcss@3.4.15)
@@ -302,8 +302,8 @@ packages:
     resolution: {integrity: sha512-kQUVEgMDj0yE7LOdrDhKOC8JkfUzUKsUqp8m9WQDiSxim8Bnga+80opjXaCtHLhO3/W3DIZMow8QXtXUqNS+zA==}
     engines: {node: '>= 6'}
 
-  '@divriots/jampack@0.30.0':
-    resolution: {integrity: sha512-QRuqD87Fu3/xNgZ7CaI/oW+aOdemWlwoiX39O6nPtw8dVeqiHsgww/V0QIsGm1T5gS15GcoBJy1GSIxEgSU1tg==}
+  '@divriots/jampack@0.32.0':
+    resolution: {integrity: sha512-GRCMPkKsBEBFnAMHzJWrFTRP/tX6o8RU8iGoAqt1uyFXsCYGWxYUn9wSFvyvPd4AsaKB7i++3ggbbr7l2s8GMA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -759,9 +759,6 @@ packages:
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
-
-  '@proload/core@0.3.3':
-    resolution: {integrity: sha512-7dAFWsIK84C90AMl24+N/ProHKm4iw0akcnoKjRvbfHifJZBLhaDsDus1QJmhG12lXj4e/uB/8mB/0aduCW+NQ==}
 
   '@resvg/resvg-js-android-arm-eabi@2.6.2':
     resolution: {integrity: sha512-FrJibrAk6v29eabIPgcTUMPXiEz8ssrAk7TXxsiZzww9UTQ1Z5KAbFJs+Z0Ez+VZTYgnE5IQJqBcoSiMebtPHA==}
@@ -1986,6 +1983,9 @@ packages:
   lower-case@2.0.2:
     resolution: {integrity: sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg==}
 
+  lozad@1.16.0:
+    resolution: {integrity: sha512-JBr9WjvEFeKoyim3svo/gsQPTkgG/mOHJmDctZ/+U9H3ymUuvEkqpn8bdQMFsvTMcyRJrdJkLv0bXqGm0sP72w==}
+
   lru-cache@10.4.3:
     resolution: {integrity: sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==}
 
@@ -2219,10 +2219,6 @@ packages:
 
   oniguruma-to-es@0.4.1:
     resolution: {integrity: sha512-rNcEohFz095QKGRovP/yqPIKc+nP+Sjs4YTHMv33nMePGKrq/r2eu9Yh4646M5XluGJsUnmwoXuiXE69KDs+fQ==}
-
-  ora@8.1.0:
-    resolution: {integrity: sha512-GQEkNkH/GHOhPFXcqZs3IDahXEQcQxsSjEkK4KvEEST4t7eNzoMjxTzef+EZ+JluDEV+Raoi3WQ2CflnRdSVnQ==}
-    engines: {node: '>=18'}
 
   ora@8.1.1:
     resolution: {integrity: sha512-YWielGi1XzG1UTvOaCFaNgEnuhZVMSHYkW/FQ7UX8O26PtlpdM84c0f7wLPlkvx2RfiQmnzd61d/MGxmpQeJPw==}
@@ -3422,11 +3418,10 @@ snapshots:
       undici: 5.28.4
       whatwg-mimetype: 3.0.0
 
-  '@divriots/jampack@0.30.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@divriots/jampack@0.32.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@commander-js/extra-typings': 12.1.0(commander@12.1.0)
       '@divriots/cheerio': 1.0.0-rc.12
-      '@proload/core': 0.3.3
       '@swc/core': 1.7.39
       add: 2.0.6
       browserslist: 4.24.2
@@ -3434,14 +3429,16 @@ snapshots:
       critters: 0.0.22
       deepmerge: 4.3.1
       esbuild: 0.20.2
+      escalade: 3.2.0
       file-type: 19.6.0
       globby: 14.0.2
       hasha: 6.0.0
       html-minifier-terser: 7.2.0
       kleur: 4.1.5
       lightningcss: 1.27.0
+      lozad: 1.16.0
       mini-svg-data-uri: 1.4.4
-      ora: 8.1.0
+      ora: 8.1.1
       quicklink: 2.3.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       sharp: 0.33.5
       svgo: 3.3.2
@@ -3743,11 +3740,6 @@ snapshots:
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
-
-  '@proload/core@0.3.3':
-    dependencies:
-      deepmerge: 4.3.1
-      escalade: 3.2.0
 
   '@resvg/resvg-js-android-arm-eabi@2.6.2':
     optional: true
@@ -5012,6 +5004,8 @@ snapshots:
     dependencies:
       tslib: 2.8.0
 
+  lozad@1.16.0: {}
+
   lru-cache@10.4.3: {}
 
   lru-cache@5.1.1:
@@ -5425,18 +5419,6 @@ snapshots:
       emoji-regex-xs: 1.0.0
       regex: 5.0.2
       regex-recursion: 4.3.0
-
-  ora@8.1.0:
-    dependencies:
-      chalk: 5.3.0
-      cli-cursor: 5.0.0
-      cli-spinners: 2.9.2
-      is-interactive: 2.0.0
-      is-unicode-supported: 2.1.0
-      log-symbols: 6.0.0
-      stdin-discarder: 0.2.2
-      string-width: 7.2.0
-      strip-ansi: 7.1.0
 
   ora@8.1.1:
     dependencies:
