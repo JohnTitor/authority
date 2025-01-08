@@ -58,8 +58,8 @@ importers:
         specifier: 1.5.3
         version: 1.5.3
       '@divriots/jampack':
-        specifier: ^0.32.0
-        version: 0.32.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^0.33.0
+        version: 0.33.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@tailwindcss/typography':
         specifier: ^0.5.10
         version: 0.5.15(tailwindcss@3.4.16)
@@ -302,8 +302,8 @@ packages:
     resolution: {integrity: sha512-kQUVEgMDj0yE7LOdrDhKOC8JkfUzUKsUqp8m9WQDiSxim8Bnga+80opjXaCtHLhO3/W3DIZMow8QXtXUqNS+zA==}
     engines: {node: '>= 6'}
 
-  '@divriots/jampack@0.32.0':
-    resolution: {integrity: sha512-GRCMPkKsBEBFnAMHzJWrFTRP/tX6o8RU8iGoAqt1uyFXsCYGWxYUn9wSFvyvPd4AsaKB7i++3ggbbr7l2s8GMA==}
+  '@divriots/jampack@0.33.0':
+    resolution: {integrity: sha512-/zXyK9ttCWP2N430tzVkvMRruOZekicU+76eo3jOSSZPJTt/xS9Jw0ulmjAHP/2LgfN4Ckj9Or7YosTCIZ5syQ==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -3425,7 +3425,7 @@ snapshots:
       undici: 5.28.4
       whatwg-mimetype: 3.0.0
 
-  '@divriots/jampack@0.32.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@divriots/jampack@0.33.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@commander-js/extra-typings': 12.1.0(commander@12.1.0)
       '@divriots/cheerio': 1.0.0-rc.12
