@@ -1,10 +1,10 @@
 ---
-import { LOGO_IMAGE, SITE } from "@config";
-import Hr from "./Hr.astro";
-import LinkButton from "./LinkButton.astro";
+import { LOGO_IMAGE, SITE } from '@config';
+import Hr from './Hr.astro';
+import LinkButton from './LinkButton.astro';
 
 export interface Props {
-  activeNav?: "posts" | "tags" | "about" | "search";
+  activeNav?: 'posts' | 'tags' | 'about' | 'search';
 }
 
 const { activeNav } = Astro.props;
