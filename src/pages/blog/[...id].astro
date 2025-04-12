@@ -1,0 +1,173 @@
+---
+import Breadcrumbs from '@/components/Breadcrumbs.astro'
+import Link from '@/components/Link.astro'
+import PostHead from '@/components/PostHead.astro'
+import PostNavigation from '@/components/PostNavigation.astro'
+import TableOfContents from '@/components/TableOfContents.astro'
+import { badgeVariants } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Separator } from '@/components/ui/separator'
+import Layout from '@/layouts/Layout.astro'
+import { getAdjacentPosts, getAllPosts, parseAuthors } from '@/lib/data-utils'
+import { formatDate, readingTime } from '@/lib/utils'
+import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets'
+import { render } from 'astro:content'
+
+export async function getStaticPaths() {
+  const posts = await getAllPosts()
+  return posts.map((post) => ({
+    params: { id: post.id },
+    props: post,
+  }))
+}
+
+const post = Astro.props
+const currentPostId = Astro.params.id
+const { Content, headings } = await render(post)
+const { next, prev } = await getAdjacentPosts(currentPostId)
+const authors = await parseAuthors(post.data.authors ?? [])
+---
+
+<Layout isWide>
+  <PostHead slot="head" post={post} />
+  <section
+    class="grid grid-cols-[minmax(0px,1fr)_min(calc(var(--breakpoint-md)-2rem),100%)_minmax(0px,1fr)] gap-y-6"
+  >
+    <div class="col-start-2">
+      <Breadcrumbs
+        items={[
+          { href: '/blog', label: 'Blog', icon: 'lucide:archive' },
+          { label: post.data.title, icon: 'lucide:file-text' },
+        ]}
+      />
+    </div>
+    {
+      post.data.image && (
+        <Image
+          src={post.data.image}
+          alt={post.data.title}
+          width={1200}
+          height={630}
+          class="col-span-full mx-auto w-full max-w-5xl object-cover"
+        />
+      )
+    }
+    <section class="col-start-2 flex flex-col gap-y-6 text-center">
+      <div class="flex flex-col">
+        <h1
+          class="mb-2 text-4xl leading-tight font-medium text-pretty sm:text-5xl"
+        >
+          {post.data.title}
+        </h1>
+
+        <div
+          class="text-muted-foreground mb-4 flex flex-wrap items-center justify-center gap-2 text-sm"
+        >
+          {
+            authors.length > 0 && (
+              <>
+                <div class="flex items-center gap-x-2">
+                  {authors.map((author) => (
+                    <div class="flex items-center gap-x-1.5">
+                      <Image
+                        src={author.avatar}
+                        alt={author.name}
+                        width={24}
+                        height={24}
+                        class="rounded-full"
+                      />
+                      {author.isRegistered ? (
+                        <Link
+                          href={`/authors/${author.id}`}
+                          underline
+                          class="text-foreground"
+                        >
+                          <span>{author.name}</span>
+                        </Link>
+                      ) : (
+                        <span>{author.name}</span>
+                      )}
+                    </div>
+                  ))}
+                </div>
+                <Separator orientation="vertical" className="h-4!" />
+              </>
+            )
+          }
+          <div class="flex items-center gap-2">
+            <span>{formatDate(post.data.date)}</span>
+            <Separator orientation="vertical" className="h-4!" />
+            <span>{readingTime(post.body!)}</span>
+          </div>
+        </div>
+        <div class="flex flex-wrap justify-center gap-2">
+          {
+            post.data.tags && post.data.tags.length > 0 ? (
+              post.data.tags.map((tag) => (
+                <a
+                  href={`/tags/${tag}`}
+                  class={badgeVariants({ variant: 'secondary' })}
+                >
+                  <Icon name="lucide:hash" class="size-3" />
+                  {tag}
+                </a>
+              ))
+            ) : (
+              <span class="text-muted-foreground text-sm">
+                No tags available
+              </span>
+            )
+          }
+        </div>
+      </div>
+
+      <PostNavigation prevPost={prev} nextPost={next} />
+    </section>
+
+    {headings.length > 0 && <TableOfContents headings={headings} />}
+
+    <article class="prose col-start-2 max-w-none">
+      <Content />
+    </article>
+
+    <PostNavigation prevPost={prev} nextPost={next} />
+  </section>
+
+  <Button
+    variant="outline"
+    size="icon"
+    className="group fixed right-8 bottom-8 z-50 hidden"
+    id="scroll-to-top"
+    title="Scroll to top"
+    aria-label="Scroll to top"
+  >
+    <Icon
+      name="lucide:arrow-up"
+      class="mx-auto size-4 transition-all group-hover:-translate-y-0.5"
+    />
+  </Button>
+
+  <script>
+    document.addEventListener('astro:page-load', () => {
+      const scrollToTopButton = document.getElementById('scroll-to-top')
+      const footer = document.querySelector('footer')
+
+      if (scrollToTopButton && footer) {
+        scrollToTopButton.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' })
+        })
+
+        window.addEventListener('scroll', () => {
+          const footerRect = footer.getBoundingClientRect()
+          const isFooterVisible = footerRect.top <= window.innerHeight
+
+          scrollToTopButton.classList.toggle(
+            'hidden',
+            window.scrollY <= 300 || isFooterVisible,
+          )
+        })
+      }
+    })
+  </script>
+</Layout>

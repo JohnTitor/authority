@@ -1,0 +1,30 @@
+---
+import Breadcrumbs from '@/components/Breadcrumbs.astro'
+import Link from '@/components/Link.astro'
+import PageHead from '@/components/PageHead.astro'
+import ProjectCard from '@/components/ProjectCard.astro'
+import Layout from '@/layouts/Layout.astro'
+import { getAllProjects } from '@/lib/data-utils'
+
+const projects = await getAllProjects()
+---
+
+<Layout>
+  <PageHead slot="head" title="About" />
+  <Breadcrumbs items={[{ label: 'About', icon: 'lucide:info' }]} />
+
+  <section>
+    <div class="min-w-full">
+      <div class="prose mb-8">
+        <p class="mb-4">
+          For more details around work experience, please check out my LinkedIn or Lapras profile.
+        </p>
+      </div>
+
+      <h2 class="mb-4 text-2xl font-medium">Involved Projects</h2>
+      <div class="flex flex-col gap-4">
+        {projects.map((project) => <ProjectCard project={project} />)}
+      </div>
+    </div>
+  </section>
+</Layout>
