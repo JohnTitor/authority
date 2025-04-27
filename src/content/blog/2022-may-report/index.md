@@ -2,7 +2,6 @@
 date: 2022-06-18T00:00:00Z
 title: 'Contribution report for May 2022'
 tags: ['report']
-authors: ['JohnTitor']
 description: 'A contribution report for May 2022, by @JohnTitor.'
 ---
 

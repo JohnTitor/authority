@@ -3,7 +3,6 @@ date: 2021-06-01
 title: 'Contribution report for Apr. and May 2021'
 tags: ['report']
 description: 'A contribution report for Apr. and May 2021, by @JohnTitor.'
-authors: ['JohnTitor']
 ---
 
 ## Highlighted works

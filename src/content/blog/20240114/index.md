@@ -4,7 +4,6 @@ title: 'diary: 20240114'
 tags:
   - diary
   - japanese
-authors: ['JohnTitor']
 description: 'diary: 20240114'
 ---
 

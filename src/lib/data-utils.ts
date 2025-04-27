@@ -31,10 +31,6 @@ export async function getAdjacentPosts(currentId: string): Promise<{
   }
 }
 
-export async function getAllAuthors(): Promise<CollectionEntry<'authors'>[]> {
-  return await getCollection('authors')
-}
-
 export async function getAllProjects(): Promise<CollectionEntry<'projects'>[]> {
   const projects = await getCollection('projects')
   return projects.sort((a, b) => {
@@ -79,31 +75,6 @@ export function groupPostsByYear(
     },
     {},
   )
-}
-
-export async function parseAuthors(authorIds: string[] = []) {
-  if (!authorIds.length) return []
-
-  const allAuthors = await getAllAuthors()
-  const authorMap = new Map(allAuthors.map((author) => [author.id, author]))
-
-  return authorIds.map((id) => {
-    const author = authorMap.get(id)
-
-    return {
-      id,
-      name: author?.data?.name || id,
-      avatar: author?.data?.avatar || '/static/logo.png',
-      isRegistered: !!author,
-    }
-  })
-}
-
-export async function getPostsByAuthor(
-  authorId: string,
-): Promise<CollectionEntry<'blog'>[]> {
-  const posts = await getAllPosts()
-  return posts.filter((post) => post.data.authors?.includes(authorId))
 }
 
 export async function getPostsByTag(

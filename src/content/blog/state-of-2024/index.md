@@ -1,7 +1,6 @@
 ---
 date: 2024-01-18
 title: 'The state of @JohnTitor, 2024'
-authors: ['JohnTitor']
 tags:
   - report
 description: 'The state of @JohnTitor, 2024'

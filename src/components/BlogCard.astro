@@ -2,7 +2,6 @@
 import AvatarComponent from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
-import { parseAuthors } from '@/lib/data-utils'
 import { formatDate, readingTime } from '@/lib/utils'
 import { Icon } from 'astro-icon/components'
 import { Image } from 'astro:assets'
@@ -16,7 +15,6 @@ interface Props {
 const { entry } = Astro.props
 const formattedDate = formatDate(entry.data.date)
 const readTime = readingTime(entry.body!)
-const authors = await parseAuthors(entry.data.authors ?? [])
 ---
 
 <div
@@ -43,33 +41,6 @@ const authors = await parseAuthors(entry.data.authors ?? [])
     <div class="grow">
       <h3 class="mb-1 text-lg font-medium">{entry.data.title}</h3>
       <p class="text-muted-foreground mb-2 text-sm">{entry.data.description}</p>
-
-      <div
-        class="text-muted-foreground mb-2 flex flex-wrap items-center gap-x-2 text-xs"
-      >
-        {
-          authors.length > 0 && (
-            <>
-              {authors.map((author) => (
-                <div class="flex items-center gap-x-1.5">
-                  <AvatarComponent
-                    client:load
-                    src={author.avatar}
-                    alt={author.name}
-                    fallback={author.name[0]}
-                    className="size-5 rounded-full"
-                  />
-                  <span>{author.name}</span>
-                </div>
-              ))}
-              <Separator orientation="vertical" className="h-4!" />
-            </>
-          )
-        }
-        <span>{formattedDate}</span>
-        <Separator orientation="vertical" className="h-4!" />
-        <span>{readTime}</span>
-      </div>
 
       {
         entry.data.tags && (

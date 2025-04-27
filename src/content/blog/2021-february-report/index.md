@@ -2,7 +2,6 @@
 date: 2021-03-04
 title: 'Contribution report for Feb. 2021'
 tags: ['report']
-authors: ['JohnTitor']
 description: 'A contribution report for Feb. 2021, by @JohnTitor.'
 ---
 

@@ -1,7 +1,6 @@
 ---
 date: 2022-12-23
 title: 'The state of @JohnTitor, 2022'
-authors: ['JohnTitor']
 tags:
   - report
 description: 'The state of @JohnTitor, 2022'
