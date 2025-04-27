@@ -10,6 +10,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "prettier": "prettier --write **/*.{ts,tsx,css,astro} --ignore-path .gitignore",
+    "ci": "prettier --check **/*.{ts,tsx,css,astro} --ignore-path .gitignore",
     "postinstall": "patch-package"
   },
   "dependencies": {

@@ -2,8 +2,7 @@ import type { IconMap, SocialLink, Site } from '@/types'
 
 export const SITE: Site = {
   title: 'oshino.meme',
-  description:
-    'oshino.meme is a personal blog by Yuki Okushi.',
+  description: 'oshino.meme is a personal blog by Yuki Okushi.',
   href: 'https://www.oshino.meme',
   author: 'Yuki Okushi',
   locale: 'ja-JP',
