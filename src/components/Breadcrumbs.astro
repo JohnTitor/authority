@@ -1,60 +1,57 @@
 ---
-// Remove current url path and remove trailing slash if exists
-const currentUrlPath = Astro.url.pathname.replace(/\/+$/, '');
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from '@/components/ui/breadcrumb'
+import { Icon } from 'astro-icon/components'
 
-// Get url array from path
-// eg: /tags/tailwindcss => ['tags', 'tailwindcss']
-const breadcrumbList = currentUrlPath.split('/').slice(1);
+export interface BreadcrumbItem {
+  href?: string
+  label: string
+  icon?: string
+}
 
-// if breadcrumb is Home > Posts > 1 <etc>
-// replace Posts with Posts (page number)
-breadcrumbList[0] === 'posts' &&
-  breadcrumbList.splice(0, 2, `Posts (page ${breadcrumbList[1] || 1})`);
+interface Props {
+  items: BreadcrumbItem[]
+}
+
+const { items } = Astro.props
 ---
 
-<nav class="breadcrumb" aria-label="breadcrumb">
-  <ul>
-    <li>
-      <a href="/">Home</a>
-      <span aria-hidden="true">&nbsp;&gt;&nbsp;</span>
-    </li>
+<Breadcrumb>
+  <BreadcrumbList>
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/">
+        <Icon name="lucide:home" class="size-4" />
+      </BreadcrumbLink>
+    </BreadcrumbItem>
     {
-      breadcrumbList.map((breadcrumb, index) =>
-        index + 1 === breadcrumbList.length ? (
-          <li>
-            <span
-              class={`${index > 0 ? "lowercase" : "capitalize"}`}
-              aria-current="page"
-            >
-              {/* make the last part lowercase in Home > Tags > some-tag */}
-              {breadcrumb}
-            </span>
-          </li>
-        ) : (
-          <li>
-            <a href={`/${breadcrumb}`}>{breadcrumb}</a>
-            <span aria-hidden="true">&nbsp;&gt;&nbsp;</span>
-          </li>
-        )
-      )
+      items.map((item, index) => (
+        <>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            {index === items.length - 1 ? (
+              <BreadcrumbPage>
+                <span class="flex items-center gap-x-2">
+                  {item.icon && <Icon name={item.icon} class="size-4" />}
+                  {item.label}
+                </span>
+              </BreadcrumbPage>
+            ) : (
+              <BreadcrumbLink href={item.href}>
+                <span class="flex items-center gap-x-2">
+                  {item.icon && <Icon name={item.icon} class="size-4" />}
+                  {item.label}
+                </span>
+              </BreadcrumbLink>
+            )}
+          </BreadcrumbItem>
+        </>
+      ))
     }
-  </ul>
-</nav>
-
-<style>
-  .breadcrumb {
-    @apply mx-auto mb-1 mt-8 w-full max-w-3xl px-4;
-  }
-  .breadcrumb ul li {
-    @apply inline;
-  }
-  .breadcrumb ul li a {
-    @apply capitalize opacity-70;
-  }
-  .breadcrumb ul li span {
-    @apply opacity-70;
-  }
-  .breadcrumb ul li:not(:last-child) a {
-    @apply hover:opacity-100;
-  }
-</style>
+  </BreadcrumbList>
+</Breadcrumb>
