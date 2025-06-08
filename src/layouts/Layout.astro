@@ -14,7 +14,7 @@ import {
 } from "../constants/constants";
 import { defaultFavicons } from "../constants/icon";
 import type { Favicon } from "../types/config";
-import { url, pathsEqual } from "../utils/url-utils";
+import { url } from "../utils/url-utils";
 
 interface Props {
 	title?: string;
@@ -138,7 +138,6 @@ import {
 	OverlayScrollbars,
 } from 'overlayscrollbars';
 import {getHue, getStoredTheme, setHue, setTheme} from "../utils/setting-utils";
-import {pathsEqual, url} from "../utils/url-utils";
 
 function setClickOutsideToClose(panel: string, ignores: string[]) {
 	document.addEventListener("click", event => {
@@ -204,7 +203,7 @@ const setup = () => {
 		document.documentElement.style.setProperty('--content-delay', '0ms')
 	})
 	window.swup.hooks.on('content:replace', initCustomScrollbar)
-	window.swup.hooks.on('visit:start', (visit: {to: {url: string}}) => {
+	window.swup.hooks.on('visit:start', () => {
 		// increase the page height during page transition to prevent the scrolling animation from jumping
 		const heightExtend = document.getElementById('page-height-extend')
 		if (heightExtend) {

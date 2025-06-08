@@ -40,22 +40,22 @@ export const profileConfig: ProfileConfig = {
 	links: [
 		{
 			name: "GitHub",
-			icon: "fa6-brands:github",
+			icon: "line-md:github-loop",
 			url: "https://github.com/JohnTitor",
 		},
 		{
 			name: "Mastodon",
-			icon: "fa6-brands:mastodon",
+			icon: "line-md:mastodon",
 			url: "https://mastodon.online/@ggwp",
 		},
 		{
 			name: "LinkedIn",
-			icon: "fa6-brands:linkedin",
+			icon: "line-md:linkedin",
 			url: "https://www.linkedin.com/in/jtitor/",
 		},
 		{
 			name: "Email",
-			icon: "fa6-solid:envelope",
+			icon: "line-md:email",
 			url: "mailto:huyuumi.dev@gmail.com",
 		},
 	],
