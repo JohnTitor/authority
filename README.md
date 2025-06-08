@@ -1,6 +1,6 @@
 # oshino.meme
 
-This repo uses <https://github.com/jktrn/astro-erudite> as a template.
+This repo uses <https://github.com/saicaca/fuwari> as a template.
 
 ## 📜 License
 
