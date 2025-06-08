@@ -36,7 +36,7 @@ export const navBarConfig: NavBarConfig = {
 export const profileConfig: ProfileConfig = {
 	avatar: "assets/images/avatar.jpg",
 	name: "Yuki Okushi",
-	bio: "Cutest magician in the world, and the only one who can use magic.",
+	bio: "FLOSS nerd, Warrior of Light, and Aphelios OTP",
 	links: [
 		{
 			name: "GitHub",

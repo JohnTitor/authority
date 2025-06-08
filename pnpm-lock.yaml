@@ -35,9 +35,9 @@ importers:
       '@fontsource-variable/jetbrains-mono':
         specifier: ^5.2.5
         version: 5.2.5
-      '@fontsource/roboto':
+      '@fontsource-variable/noto-sans-jp':
         specifier: ^5.2.5
-        version: 5.2.6
+        version: 5.2.5
       '@iconify-json/line-md':
         specifier: ^1.2.8
         version: 1.2.8
@@ -1071,8 +1071,8 @@ packages:
   '@fontsource-variable/jetbrains-mono@5.2.5':
     resolution: {integrity: sha512-G3sN1xq1moZd0JL+hFaA4MEdsiQS+JXC/z7m+EqA5/Fzn5CQlXGUaaNKFGQdDsFuLTnCfW0KOOSWHjygNfjEPw==}
 
-  '@fontsource/roboto@5.2.6':
-    resolution: {integrity: sha512-hzarG7yAhMoP418smNgfY4fO7UmuUEm5JUtbxCoCcFHT0hOJB+d/qAEyoNjz7YkPU5OjM2LM8rJnW8hfm0JLaA==}
+  '@fontsource-variable/noto-sans-jp@5.2.5':
+    resolution: {integrity: sha512-+ieDlugS+FCva2eLahVgybiaPMs1xLcBYByflzw1WghvFPFNJzsQHw85N+dadXzaqccVTiVDGYW4E0bMv4CHAQ==}
 
   '@iconify-json/line-md@1.2.8':
     resolution: {integrity: sha512-jWFsu6OZ1xAd4U0MLc/dgawC8nCbSn+a+WjTv+luiihpb6rrGLMw+Vy3wQ01hGf77v+fwt8sTvwm6K9zN3r4vQ==}
@@ -6322,7 +6322,7 @@ snapshots:
 
   '@fontsource-variable/jetbrains-mono@5.2.5': {}
 
-  '@fontsource/roboto@5.2.6': {}
+  '@fontsource-variable/noto-sans-jp@5.2.5': {}
 
   '@iconify-json/line-md@1.2.8':
     dependencies:
