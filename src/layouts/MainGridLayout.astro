@@ -1,0 +1,79 @@
+---
+import Footer from "@components/Footer.astro";
+import Navbar from "@components/Navbar.astro";
+import BackToTop from "@components/control/BackToTop.astro";
+import SideBar from "@components/widget/SideBar.astro";
+import type { MarkdownHeading } from "astro";
+import TOC from "../components/widget/TOC.astro";
+import { siteConfig } from "../config";
+import Layout from "./Layout.astro";
+
+interface Props {
+	title?: string;
+	description?: string;
+	lang?: string;
+	setOGTypeArticle?: boolean;
+	headings?: MarkdownHeading[];
+}
+
+const {
+	title,
+	description,
+	lang,
+	setOGTypeArticle,
+	headings = [],
+} = Astro.props;
+---
+
+<Layout title={title} description={description} lang={lang} setOGTypeArticle={setOGTypeArticle}>
+
+<slot slot="head" name="head"></slot>
+<div id="top-row" class="z-50 pointer-events-none relative transition-all duration-700 max-w-[var(--page-width)] px-0 md:px-4 mx-auto" class:list={[""]}>
+    <div id="navbar-wrapper" class="pointer-events-auto sticky top-0 transition-all">
+        <Navbar></Navbar>
+    </div>
+</div>
+
+<div class="absolute w-full z-30 pointer-events-none" style="top: 5.5rem">
+    <div class="relative max-w-[var(--page-width)] mx-auto pointer-events-auto">
+        <div id="main-grid" class="transition duration-700 w-full left-0 right-0 grid grid-cols-[17.5rem_auto] grid-rows-[auto_1fr_auto] lg:grid-rows-[auto]
+    mx-auto gap-4 px-0 md:px-4"
+        >
+            <SideBar class="mb-4 row-start-2 row-end-3 col-span-2 lg:row-start-1 lg:row-end-2 lg:col-span-1 lg:max-w-[17.5rem] onload-animation" headings={headings}></SideBar>
+
+            <main id="swup-container" class="transition-swup-fade col-span-2 lg:col-span-1 overflow-hidden">
+                <div id="content-wrapper" class="onload-animation">
+                    <slot></slot>
+                    <div class="footer col-span-2 onload-animation hidden lg:block">
+                        <Footer></Footer>
+                    </div>
+                </div>
+            </main>
+
+            <div class="footer col-span-2 onload-animation block lg:hidden">
+                <Footer></Footer>
+            </div>
+        </div>
+
+        <BackToTop></BackToTop>
+    </div>
+</div>
+
+<div class="absolute w-full z-0 hidden 2xl:block">
+    <div class="relative max-w-[var(--page-width)] mx-auto">
+        {siteConfig.toc.enable && <div id="toc-wrapper" class:list={["hidden lg:block transition absolute top-0 -right-[var(--toc-width)] w-[var(--toc-width)] items-center",
+            {"toc-hide": false}]}
+        >
+            <div id="toc-inner-wrapper" class="fixed top-14 w-[var(--toc-width)] h-[calc(100vh_-_20rem)] overflow-y-scroll overflow-x-hidden hide-scrollbar">
+                <div id="toc" class="w-full h-full transition-swup-fade ">
+                    <div class="h-8 w-full"></div>
+                    <TOC headings={headings}></TOC>
+                    <div class="h-8 w-full"></div>
+                </div>
+            </div>
+        </div>}
+
+        {!siteConfig.toc.enable && <div id="toc"></div>}
+    </div>
+</div>
+</Layout>
