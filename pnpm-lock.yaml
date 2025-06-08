@@ -34,7 +34,7 @@ importers:
         version: 0.41.2
       '@fontsource-variable/jetbrains-mono':
         specifier: ^5.2.5
-        version: 5.2.5
+        version: 5.2.6
       '@fontsource-variable/noto-sans-jp':
         specifier: ^5.2.5
         version: 5.2.5
@@ -1068,8 +1068,8 @@ packages:
   '@expressive-code/plugin-text-markers@0.41.2':
     resolution: {integrity: sha512-JFWBz2qYxxJOJkkWf96LpeolbnOqJY95TvwYc0hXIHf9oSWV0h0SY268w/5N3EtQaD9KktzDE+VIVwb9jdb3nw==}
 
-  '@fontsource-variable/jetbrains-mono@5.2.5':
-    resolution: {integrity: sha512-G3sN1xq1moZd0JL+hFaA4MEdsiQS+JXC/z7m+EqA5/Fzn5CQlXGUaaNKFGQdDsFuLTnCfW0KOOSWHjygNfjEPw==}
+  '@fontsource-variable/jetbrains-mono@5.2.6':
+    resolution: {integrity: sha512-1pvtyK6H1paBOixbtZ9xfQgArVQ4SJMW3WSGZPOd5PiW3yg0t8umwKnjDMzW2ofb7qSdiXnsnIaHPT36vEOdlg==}
 
   '@fontsource-variable/noto-sans-jp@5.2.5':
     resolution: {integrity: sha512-+ieDlugS+FCva2eLahVgybiaPMs1xLcBYByflzw1WghvFPFNJzsQHw85N+dadXzaqccVTiVDGYW4E0bMv4CHAQ==}
@@ -6320,7 +6320,7 @@ snapshots:
     dependencies:
       '@expressive-code/core': 0.41.2
 
-  '@fontsource-variable/jetbrains-mono@5.2.5': {}
+  '@fontsource-variable/jetbrains-mono@5.2.6': {}
 
   '@fontsource-variable/noto-sans-jp@5.2.5': {}
 
