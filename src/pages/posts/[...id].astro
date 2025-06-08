@@ -6,7 +6,7 @@ import I18nKey from "@i18n/i18nKey";
 import { i18n } from "@i18n/translation";
 import MainGridLayout from "@layouts/MainGridLayout.astro";
 import { getSortedPosts } from "@utils/content-utils";
-import { getDir, getPostUrlBySlug } from "@utils/url-utils";
+import { getDir, getPostUrlById } from "@utils/url-utils";
 import { Icon } from "astro-icon/components";
 import PostMetadata from "../../components/PostMeta.astro";
 import ImageWrapper from "../../components/misc/ImageWrapper.astro";
@@ -99,11 +99,31 @@ const jsonLd = {
             <Markdown class="mb-6 markdown-content onload-animation">
                 <Content />
             </Markdown>
+            <div class="flex gap-2 mt-5 mb-5 justify-end onload-animation">
+                <div class="relative">
+                    <a href=`https://bsky.app/intent/compose?text=${entry.data.title}｜oshino.meme ${Astro.site}${entry.id}` target="_blank" class="btn-regular rounded-lg h-10 w-10 active:scale-90 group">
+                        <Icon name="line-md:bluesky" class="text-[1.5rem]"></Icon>
+                        <span
+                            class="whitespace-nowrap rounded bg-gray-700 px-2 py-1 text-white absolute -top-10 left-1/2 -translate-x-1/2 before:content-[''] before:absolute before:-translate-x-1/2 before:left-1/2 before:top-full before:border-4 before:border-transparent before:border-t-gray-700 opacity-0 group-hover:opacity-100 transition pointer-events-none">
+                            Share on Bluesky
+                        </span>
+                    </a>
+                </div>
+                <div class="relative">
+                    <a href=`https://x.com/intent/post?text=${entry.data.title}｜oshino.meme ${Astro.site}${entry.id}` target="_blank" class="btn-regular rounded-lg h-10 w-10 active:scale-90 group">
+                        <Icon name="line-md:twitter-x" class="text-[1.5rem]"></Icon>
+                        <span
+                            class="whitespace-nowrap rounded bg-gray-700 px-2 py-1 text-white absolute -top-10 left-1/2 -translate-x-1/2 before:content-[''] before:absolute before:-translate-x-1/2 before:left-1/2 before:top-full before:border-4 before:border-transparent before:border-t-gray-700 opacity-0 group-hover:opacity-100 transition pointer-events-none">
+                            Share on X
+                        </span>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="flex flex-col md:flex-row justify-between mb-4 gap-4 overflow-hidden w-full">
-        <a href={entry.data.nextSlug ? getPostUrlBySlug(entry.data.nextSlug) : "#"}
+        <a href={entry.data.nextSlug ? getPostUrlById(entry.data.nextSlug) : "#"}
            class:list={["w-full font-bold overflow-hidden active:scale-95", {"pointer-events-none": !entry.data.nextSlug}]}>
             {entry.data.nextSlug && <div class="btn-card rounded-2xl w-full h-[3.75rem] max-w-full px-4 flex items-center !justify-start gap-4" >
                 <Icon name="material-symbols:chevron-left-rounded" class="text-[2rem] text-[var(--primary)]" />
@@ -113,7 +133,7 @@ const jsonLd = {
             </div>}
         </a>
 
-        <a href={entry.data.prevSlug ? getPostUrlBySlug(entry.data.prevSlug) : "#"}
+        <a href={entry.data.prevSlug ? getPostUrlById(entry.data.prevSlug) : "#"}
            class:list={["w-full font-bold overflow-hidden active:scale-95", {"pointer-events-none": !entry.data.prevSlug}]}>
             {entry.data.prevSlug && <div class="btn-card rounded-2xl w-full h-[3.75rem] max-w-full px-4 flex items-center !justify-end gap-4">
                 <div class="overflow-hidden transition overflow-ellipsis whitespace-nowrap max-w-[calc(100%_-_3rem)] text-black/75 dark:text-white/75">
