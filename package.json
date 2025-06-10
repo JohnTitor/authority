@@ -28,7 +28,7 @@
     "@fontsource-variable/noto-sans-jp": "^5.2.5",
     "@iconify-json/line-md": "^1.2.8",
     "@iconify-json/material-symbols": "^1.2.24",
-    "@iconify/svelte": "^4.2.0",
+    "@iconify/svelte": "^5.0.0",
     "@swup/astro": "^1.6.0",
     "@tailwindcss/typography": "^0.5.16",
     "astro": "5.9.2",
