@@ -10,7 +10,7 @@ export const siteConfig: SiteConfig = {
 	title: "oshino.meme",
 	lang: "ja",
 	themeColor: {
-		hue: 175,
+		hue: 270,
 		fixed: true,
 	},
 	toc: {
