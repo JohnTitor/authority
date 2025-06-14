@@ -13,6 +13,7 @@ interface Props {
 	description?: string;
 	lang?: string;
 	setOGTypeArticle?: boolean;
+	ogImage?: string;
 	headings?: MarkdownHeading[];
 }
 
@@ -21,11 +22,12 @@ const {
 	description,
 	lang,
 	setOGTypeArticle,
+	ogImage,
 	headings = [],
 } = Astro.props;
 ---
 
-<Layout title={title} description={description} lang={lang} setOGTypeArticle={setOGTypeArticle}>
+<Layout title={title} description={description} lang={lang} setOGTypeArticle={setOGTypeArticle} ogImage={ogImage}>
 
 <slot slot="head" name="head"></slot>
 <div id="top-row" class="z-50 pointer-events-none relative transition-all duration-700 max-w-[var(--page-width)] px-0 md:px-4 mx-auto" class:list={[""]}>

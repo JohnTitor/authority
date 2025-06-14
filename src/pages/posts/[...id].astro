@@ -21,7 +21,35 @@ export async function getStaticPaths() {
 	}));
 }
 
+const images: Record<string, string | { src: string }> = import.meta.glob(
+	"/src/content/posts/**/*.{jpg,jpeg,png,gif,webp}",
+	{ eager: true, import: "default" },
+);
+
+function resolveCoverImage(
+	frontmatterImage: string,
+): string | { src: string } | null {
+	if (!frontmatterImage) return null;
+
+	const resolvedPath = path.join(
+		"/src/content/posts",
+		frontmatterImage.replace(/^\.\/+/, ""),
+	);
+
+	return images[resolvedPath] || null;
+}
+
 const { entry } = Astro.props;
+
+const coverOptimized = resolveCoverImage(entry.data.image);
+const resolvedUrl =
+	coverOptimized &&
+	typeof coverOptimized === "object" &&
+	"src" in coverOptimized
+		? coverOptimized.src
+		: (coverOptimized as string);
+const ogImageUrl = resolvedUrl ? new URL(resolvedUrl, Astro.url).href : "";
+
 const { Content, headings } = await render(entry);
 
 const { remarkPluginFrontmatter } = await render(entry);
@@ -43,7 +71,7 @@ const jsonLd = {
 		: siteConfig.lang.replace("_", "-"),
 };
 ---
-<MainGridLayout title={entry.data.title} description={entry.data.description} lang={entry.data.lang} setOGTypeArticle={true} headings={headings}>
+<MainGridLayout title={entry.data.title} description={entry.data.description} lang={entry.data.lang} setOGTypeArticle={true} ogImage={ogImageUrl} headings={headings}>
     <script is:inline slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
     <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative mb-4">
         <div id="post-container" class:list={["card-base z-10 px-6 md:px-9 pt-6 pb-4 relative w-full ",
