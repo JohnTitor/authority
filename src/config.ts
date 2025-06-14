@@ -7,7 +7,7 @@ import type {
 import { LinkPreset } from "./types/config";
 
 export const siteConfig: SiteConfig = {
-	title: "oshino.meme",
+	title: "Wired Vestiges",
 	lang: "ja",
 	themeColor: {
 		hue: 270,

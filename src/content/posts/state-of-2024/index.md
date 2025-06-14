@@ -79,7 +79,7 @@ engineeringだけではなくbrandingも必要だからだ。
 
 > 2024年は海外にも足を向けられたらと思います。
 > 
-> Yuki Okushi 2024, ‘The state of @JohnTitor, 2023’, _oshino.meme_, weblog post, 1 Jan, accessed 18 Jan 2025, <https://www.oshino.meme/posts/the-state-of-johntitor-2023>.
+> Yuki Okushi 2024, ‘The state of @JohnTitor, 2023’, _Wired Vestiges_, weblog post, 1 Jan, accessed 18 Jan 2025, <https://www.oshino.meme/posts/the-state-of-johntitor-2023>.
 
 夏にハワイを訪れたので無事達成できた。日差しの強さはあったが比較的過ごしやすく、ビーチやマイ・タイなど"らしい"体験も色色とできた。
 

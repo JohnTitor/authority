@@ -1,4 +1,4 @@
-# oshino.meme
+# Wired Vestiges
 
 This repo uses <https://github.com/saicaca/fuwari> as a template.
 
