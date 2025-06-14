@@ -19,9 +19,10 @@ interface Props {
 	description?: string;
 	lang?: string;
 	setOGTypeArticle?: boolean;
+	ogImage?: string;
 }
 
-let { title, description, lang, setOGTypeArticle } = Astro.props;
+let { title, description, lang, setOGTypeArticle, ogImage } = Astro.props;
 
 // defines global css variables
 // why doing this in Layout instead of GlobalStyles: https://github.com/withastro/astro/issues/6728#issuecomment-1502203757
@@ -46,7 +47,7 @@ const siteLang = lang.replace("_", "-");
 
 <!DOCTYPE html>
 <html lang={siteLang} class="bg-[var(--page-bg)] transition text-[14px] md:text-[16px]"
-	  data-overlayscrollbars-initialize
+		data-overlayscrollbars-initialize
 >
 	<head>
 
@@ -61,23 +62,25 @@ const siteLang = lang.replace("_", "-");
 		<meta property="og:title" content={pageTitle}>
 		<meta property="og:description" content={description || pageTitle}>
 		{setOGTypeArticle ? (
-        <meta property="og:type" content="article" />
-        ) : (
-        <meta property="og:type" content="website" />
-        )}
+				<meta property="og:type" content="article" />
+				) : (
+				<meta property="og:type" content="website" />
+				)}
+		{ogImage && <meta property="og:image" content={new URL(ogImage, Astro.url).href} />}
 
 		<meta name="twitter:card" content="summary_large_image">
 		<meta property="twitter:url" content={Astro.url}>
 		<meta name="twitter:title" content={pageTitle}>
 		<meta name="twitter:description" content={description || pageTitle}>
+		{ogImage && <meta name="twitter:image" content={new URL(ogImage, Astro.url).href} />}
 
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="apple-touch-icon" href={url('/apple-touch-icon.png')} />
 		{favicons.map(favicon => (
 			<link rel="icon"
-				  href={favicon.src.startsWith('/') ? url(favicon.src) : favicon.src}
-				  sizes={favicon.sizes}
+					href={favicon.src.startsWith('/') ? url(favicon.src) : favicon.src}
+					sizes={favicon.sizes}
 			/>
 		))}
 		<link rel="manifest" href={url('/site.webmanifest')} />
@@ -174,7 +177,7 @@ function initCustomScrollbar() {
 		{
 			target: bodyElement,
 			cancel: {
-				nativeScrollbarsOverlaid: true,    // don't initialize the overlay scrollbar if there is a native one
+				nativeScrollbarsOverlaid: true,		// don't initialize the overlay scrollbar if there is a native one
 			}
 		}, {
 		scrollbars: {
@@ -228,12 +231,12 @@ const setup = () => {
 				heightExtend.classList.add('hidden')
 			}
 
-            // Just make the transition looks better
-            const toc = document.getElementById('toc-wrapper');
-            if (toc) {
-                toc.classList.remove('toc-not-ready')
-            }
-        }, 200)
+						// Just make the transition looks better
+						const toc = document.getElementById('toc-wrapper');
+						if (toc) {
+								toc.classList.remove('toc-not-ready')
+						}
+				}, 200)
 	});
 }
 if (window?.swup?.hooks) {
