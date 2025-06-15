@@ -37,7 +37,7 @@ importers:
         version: 5.2.6
       '@fontsource-variable/noto-sans-jp':
         specifier: ^5.2.5
-        version: 5.2.5
+        version: 5.2.6
       '@iconify-json/line-md':
         specifier: ^1.2.8
         version: 1.2.8
@@ -1054,8 +1054,8 @@ packages:
   '@fontsource-variable/jetbrains-mono@5.2.6':
     resolution: {integrity: sha512-1pvtyK6H1paBOixbtZ9xfQgArVQ4SJMW3WSGZPOd5PiW3yg0t8umwKnjDMzW2ofb7qSdiXnsnIaHPT36vEOdlg==}
 
-  '@fontsource-variable/noto-sans-jp@5.2.5':
-    resolution: {integrity: sha512-+ieDlugS+FCva2eLahVgybiaPMs1xLcBYByflzw1WghvFPFNJzsQHw85N+dadXzaqccVTiVDGYW4E0bMv4CHAQ==}
+  '@fontsource-variable/noto-sans-jp@5.2.6':
+    resolution: {integrity: sha512-YjN8UF1hX8ZFkYx95NMz8XeojsCIF5dGPu1htoWkbXyTZj3Z29cxDT8glaT/cOg1BstyOlmtvNC8crPF5Csj/w==}
 
   '@iconify-json/line-md@1.2.8':
     resolution: {integrity: sha512-jWFsu6OZ1xAd4U0MLc/dgawC8nCbSn+a+WjTv+luiihpb6rrGLMw+Vy3wQ01hGf77v+fwt8sTvwm6K9zN3r4vQ==}
@@ -6245,7 +6245,7 @@ snapshots:
 
   '@fontsource-variable/jetbrains-mono@5.2.6': {}
 
-  '@fontsource-variable/noto-sans-jp@5.2.5': {}
+  '@fontsource-variable/noto-sans-jp@5.2.6': {}
 
   '@iconify-json/line-md@1.2.8':
     dependencies:
