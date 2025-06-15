@@ -9,6 +9,7 @@ import { getSortedPosts } from "@utils/content-utils";
 import { getDir, getPostUrlById } from "@utils/url-utils";
 import { Icon } from "astro-icon/components";
 import PostMetadata from "../../components/PostMeta.astro";
+import Giscus from "../../components/comment/Giscus.astro";
 import ImageWrapper from "../../components/misc/ImageWrapper.astro";
 import { profileConfig, siteConfig } from "../../config";
 import { formatDateToYYYYMMDD } from "../../utils/date-utils";
@@ -77,7 +78,6 @@ const jsonLd = {
         <div id="post-container" class:list={["card-base z-10 px-6 md:px-9 pt-6 pb-4 relative w-full ",
             {}
         ]}>
-            <!-- word count and reading time -->
             <div class="flex flex-row text-black/30 dark:text-white/30 gap-5 mb-3 transition onload-animation">
                 <div class="flex flex-row items-center">
                     <div class="transition h-6 w-6 rounded-md bg-black/5 dark:bg-white/10 text-black/50 dark:text-white/50 flex items-center justify-center mr-2">
@@ -93,7 +93,6 @@ const jsonLd = {
                 </div>
             </div>
 
-            <!-- title -->
             <div class="relative onload-animation">
                 <div
                     data-pagefind-body data-pagefind-weight="10" data-pagefind-meta="title"
@@ -107,7 +106,6 @@ const jsonLd = {
                 </div>
             </div>
 
-            <!-- metadata -->
             <div class="onload-animation">
                 <PostMetadata
                         class="mb-5"
@@ -179,5 +177,7 @@ const jsonLd = {
             </div>}
         </a>
     </div>
+
+    <Giscus />
 
 </MainGridLayout>
