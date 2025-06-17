@@ -12,7 +12,5 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: Setup Biome
         uses: biomejs/setup-biome@a9763ed3d2388f5746f9dc3e1a55df7f4609bc89 # v2.5.1
-        with:
-          version: latest
       - name: Run Biome
         run: biome ci ./src --reporter=github
