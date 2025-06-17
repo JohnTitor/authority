@@ -1,13 +1,15 @@
-# About
+# About me
 
-Yuki Okushi is a software engineer who loves FLOSS, Rust, and platform engineering.
-You can send me an email if you have anything.
+2019年からWebエンジニアとして活動しています。R&Dエンジニアとしてキャリアをスタートし、バックエンドエンジニアを経て最近はSREやプラットフォームエンジニアに軸足を置いて活動しています。エラーレート改善やO11yの徹底をはじめとしたSRE的業務や、技術基盤の刷新・整備などといったプラットフォームエンジニアリング分野に強みがあります。GoやRustといった静的型付け言語でのバックエンド開発も得意です。
 
-## Professional Experience
+OSSにも注力しており、RustやGNOME、Node.jsといった組織で活動した経験があります。
+特にRustでは2025年6月現在で最も活動している日本人の一人です（GitHub上でのcontributionsを集計した[Thanks](https://thanks.rust-lang.org)による）。
 
-### Careers Summary
+現在、副業・業務委託での稼働に余裕があります。[email](mailto:huyuumi.dev@gmail.com)でご連絡ください。
 
-term | Company | Position | Role
+## 経歴
+
+期間 | 企業 | ポジション | ロール
 --- | --- | --- | ---
 2025-05 / Current | MOSH | Platform Engineer | Member
 2022-05 / 2025-04 | Canary | Backend, Platform Engineer | Member, TL
