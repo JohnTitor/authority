@@ -114,6 +114,15 @@ const siteLang = lang.replace("_", "-");
 
 		<link rel="alternate" type="application/rss+xml" title={profileConfig.name} href={`${Astro.site}rss.xml`}/>
 
+		<!-- Google tag (gtag.js) -->
+		<script is:inline type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-V4WEXSY81M"></script>
+		<script is:inline type="text/partytown">
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-V4WEXSY81M');
+		</script>
 	</head>
 	<body class=" min-h-screen transition " data-overlayscrollbars-initialize
 	>
