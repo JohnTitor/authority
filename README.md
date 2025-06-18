@@ -1,4 +1,4 @@
-# Wired Vestiges
+# 2k36
 
 This repo uses <https://github.com/saicaca/fuwari> as a template.
 

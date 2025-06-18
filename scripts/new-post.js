@@ -49,8 +49,8 @@ description: ''
 image: ''
 tags: []
 category: ''
-draft: false 
-lang: ''
+draft: false
+lang: 'ja'
 ---
 `
 

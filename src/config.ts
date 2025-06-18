@@ -8,7 +8,7 @@ import type {
 import { LinkPreset } from "./types/config";
 
 export const siteConfig: SiteConfig = {
-	title: "Wired Vestiges",
+	title: "2k36",
 	lang: "ja",
 	themeColor: {
 		hue: 270,

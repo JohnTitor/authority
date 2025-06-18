@@ -7,6 +7,8 @@ OSSにも注力しており、RustやGNOME、Node.jsといった組織で活動�
 
 現在、副業・業務委託での稼働に余裕があります。[email](mailto:huyuumi.dev@gmail.com)でご連絡ください。
 
+真面目な技術記事は[Zenn](https://zenn.dev/fraternite)に置いています。
+
 ## 経歴
 
 期間 | 企業 | ポジション | ロール
