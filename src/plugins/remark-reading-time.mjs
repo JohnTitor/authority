@@ -1,4 +1,4 @@
-// biome-ignore lint/suspicious/noShadowRestrictedNames: <explanation>
+// biome-ignore lint/suspicious/noShadowRestrictedNames: FIXME: need to re-visit
 import { toString } from "mdast-util-to-string";
 import getReadingTime from "reading-time";
 

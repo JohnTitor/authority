@@ -1,6 +1,6 @@
 ---
-import path from "node:path";
 import { render } from "astro:content";
+import path from "node:path";
 import Markdown from "@components/misc/Markdown.astro";
 import I18nKey from "@i18n/i18nKey";
 import { i18n } from "@i18n/translation";
@@ -8,9 +8,9 @@ import MainGridLayout from "@layouts/MainGridLayout.astro";
 import { getSortedPosts } from "@utils/content-utils";
 import { getDir, getPostUrlById } from "@utils/url-utils";
 import { Icon } from "astro-icon/components";
-import PostMetadata from "../../components/PostMeta.astro";
 import Giscus from "../../components/comment/Giscus.astro";
 import ImageWrapper from "../../components/misc/ImageWrapper.astro";
+import PostMetadata from "../../components/PostMeta.astro";
 import { profileConfig, siteConfig } from "../../config";
 import { formatDateToYYYYMMDD } from "../../utils/date-utils";
 

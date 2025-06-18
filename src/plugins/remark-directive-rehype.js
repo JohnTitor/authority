@@ -2,14 +2,14 @@ import { h } from "hastscript";
 import { visit } from "unist-util-visit";
 
 export function parseDirectiveNode() {
-	return (tree, { data }) => {
+	return (tree) => {
 		visit(tree, (node) => {
 			if (
 				node.type === "containerDirective" ||
 				node.type === "leafDirective" ||
 				node.type === "textDirective"
 			) {
-				// biome-ignore lint/suspicious/noAssignInExpressions: <explanation>
+				// biome-ignore lint/suspicious/noAssignInExpressions: FIXME: need to re-visit
 				const data = node.data || (node.data = {});
 				node.attributes = node.attributes || {};
 				if (
