@@ -4,11 +4,19 @@ import I18nKey from "@i18n/i18nKey";
 import { i18n } from "@i18n/translation";
 import MainGridLayout from "@layouts/MainGridLayout.astro";
 import { getSortedPosts } from "../utils/content-utils";
+import { getZennArticles, zennToArchivePost } from "../utils/zenn-utils";
 
 const sortedPosts = await getSortedPosts();
+const zennArticles = await getZennArticles();
+const zennPosts = zennArticles.map(zennToArchivePost);
+
+// Combine existing posts and Zenn posts, then sort by date (newest first)
+const allPosts = [...sortedPosts, ...zennPosts].sort(
+	(a, b) => b.data.published.getTime() - a.data.published.getTime(),
+);
 ---
 
 <MainGridLayout title={i18n(I18nKey.archive)}>
-    <ArchivePanel sortedPosts={sortedPosts} client:only="svelte"></ArchivePanel>
+    <ArchivePanel sortedPosts={allPosts} client:only="svelte"></ArchivePanel>
 </MainGridLayout>
 
