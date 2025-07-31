@@ -70,5 +70,5 @@
     "postcss-nesting": "^13.0.1",
     "node-fetch": "^3.3.0"
   },
-  "packageManager": "pnpm@10.13.1"
+  "packageManager": "pnpm@10.14.0"
 }
