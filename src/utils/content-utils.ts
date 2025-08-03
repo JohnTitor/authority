@@ -3,16 +3,20 @@ import I18nKey from "@i18n/i18nKey";
 import { i18n } from "@i18n/translation";
 import { getCategoryUrl } from "@utils/url-utils.ts";
 
-export async function getSortedPosts() {
+async function getSortedPostsInternal() {
 	const allBlogPosts = await getCollection("posts", ({ data }) => {
 		return import.meta.env.PROD ? data.draft !== true : true;
 	});
 
-	const sorted = allBlogPosts.sort((a, b) => {
+	return allBlogPosts.sort((a, b) => {
 		const dateA = new Date(a.data.published);
 		const dateB = new Date(b.data.published);
 		return dateA > dateB ? -1 : 1;
 	});
+}
+
+export async function getSortedPosts() {
+	const sorted = await getSortedPostsInternal();
 
 	for (let i = 1; i < sorted.length; i++) {
 		sorted[i].data.nextSlug = sorted[i - 1].id;
@@ -24,6 +28,17 @@ export async function getSortedPosts() {
 	}
 
 	return sorted;
+}
+
+export async function getSortedPostsMetadata() {
+	const sorted = await getSortedPostsInternal();
+
+	// Return posts with metadata only (excluding body content)
+	return sorted.map((post) => ({
+		id: post.id,
+		data: post.data,
+		collection: post.collection,
+	}));
 }
 
 export type Tag = {
