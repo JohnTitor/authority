@@ -1,4 +1,4 @@
-import { getCollection } from "astro:content";
+import { type CollectionEntry, getCollection } from "astro:content";
 import I18nKey from "@i18n/i18nKey";
 import { i18n } from "@i18n/translation";
 import { getCategoryUrl } from "@utils/url-utils.ts";
@@ -15,7 +15,7 @@ async function getSortedPostsInternal() {
 	});
 }
 
-export async function getSortedPosts() {
+export async function getSortedPosts(): Promise<CollectionEntry<"posts">[]> {
 	const sorted = await getSortedPostsInternal();
 
 	for (let i = 1; i < sorted.length; i++) {
@@ -30,7 +30,9 @@ export async function getSortedPosts() {
 	return sorted;
 }
 
-export async function getSortedPostsMetadata() {
+export async function getSortedPostsMetadata(): Promise<
+	Omit<CollectionEntry<"posts">, "body" | "render">[]
+> {
 	const sorted = await getSortedPostsInternal();
 
 	// Return posts with metadata only (excluding body content)

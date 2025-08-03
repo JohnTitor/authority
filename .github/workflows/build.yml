@@ -35,6 +35,9 @@ jobs:
       - name: Run Astro Check
         run: pnpm astro check
 
+      - name: Type Check
+        run: pnpm type-check
+
   build:
     runs-on: ubuntu-latest
     name: Astro Build for Node.js
