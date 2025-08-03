@@ -16,3 +16,9 @@ pnpm-debug.log*
 .env.production
 
 .vercel
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
