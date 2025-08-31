@@ -156,6 +156,7 @@ export default defineConfig({
 	},
 	vite: {
 		build: {
+			cssCodeSplit: true,
 			rollupOptions: {
 				onwarn(warning, warn) {
 					// temporarily suppress this warning
@@ -167,7 +168,20 @@ export default defineConfig({
 					}
 					warn(warning);
 				},
+				output: {
+					manualChunks: {
+						// Split vendor libraries into separate chunks
+						'swup': ['@swup/astro'],
+						'photoswipe': ['photoswipe'],
+						'ui-libs': ['overlayscrollbars'],
+						'icons': ['@iconify/svelte', 'astro-icon'],
+					}
+				}
 			},
 		},
+		ssr: {
+			// Prevent SSR issues with certain packages
+			noExternal: ['photoswipe', 'overlayscrollbars']
+		}
 	},
 });
