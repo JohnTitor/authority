@@ -1,5 +1,6 @@
 ---
 import "@fontsource-variable/noto-sans-jp";
+import "@fontsource-variable/jetbrains-mono";
 
 import ConfigCarrier from "@components/ConfigCarrier.astro";
 import { profileConfig, siteConfig } from "@/config";
@@ -125,11 +126,7 @@ const siteLang = lang.replace("_", "-");
 		<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 		<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
 		<link rel="dns-prefetch" href="//fonts.gstatic.com">
-		
-		<!-- Critical CSS Preload -->
-		<link rel="preload" href="/fonts/jetbrains-mono-variable.woff2" as="font" type="font/woff2" crossorigin>
-		<link rel="preload" href="/fonts/noto-sans-jp-variable.woff2" as="font" type="font/woff2" crossorigin>
-		
+
 		<!-- Resource Hints -->
 		<link rel="prefetch" href="/pagefind/pagefind.js">
 
