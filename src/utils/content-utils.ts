@@ -3,8 +3,15 @@ import I18nKey from "@i18n/i18nKey";
 import { i18n } from "@i18n/translation";
 import { getCategoryUrl } from "@utils/url-utils.ts";
 
-async function getSortedPostsInternal() {
-	const allBlogPosts = await getCollection("posts", ({ data }) => {
+async function getSortedPostsInternal(locale?: string) {
+	const allBlogPosts = await getCollection("posts", ({ data, id }) => {
+		// Filter by locale if provided
+		if (locale === "en") {
+			if (!id.startsWith("en/")) return false;
+		} else if (locale === "ja" || !locale) {
+			// For Japanese (default), exclude English posts
+			if (id.startsWith("en/")) return false;
+		}
 		return import.meta.env.PROD ? data.draft !== true : true;
 	});
 
@@ -15,8 +22,8 @@ async function getSortedPostsInternal() {
 	});
 }
 
-export async function getSortedPosts(): Promise<CollectionEntry<"posts">[]> {
-	const sorted = await getSortedPostsInternal();
+export async function getSortedPosts(locale?: string): Promise<CollectionEntry<"posts">[]> {
+	const sorted = await getSortedPostsInternal(locale);
 
 	for (let i = 1; i < sorted.length; i++) {
 		sorted[i].data.nextSlug = sorted[i - 1].id;
@@ -30,10 +37,10 @@ export async function getSortedPosts(): Promise<CollectionEntry<"posts">[]> {
 	return sorted;
 }
 
-export async function getSortedPostsMetadata(): Promise<
+export async function getSortedPostsMetadata(locale?: string): Promise<
 	Omit<CollectionEntry<"posts">, "body" | "render">[]
 > {
-	const sorted = await getSortedPostsInternal();
+	const sorted = await getSortedPostsInternal(locale);
 
 	// Return posts with metadata only (excluding body content)
 	return sorted.map((post) => ({
@@ -48,8 +55,15 @@ export type Tag = {
 	count: number;
 };
 
-export async function getTagList(): Promise<Tag[]> {
-	const allBlogPosts = await getCollection<"posts">("posts", ({ data }) => {
+export async function getTagList(locale?: string): Promise<Tag[]> {
+	const allBlogPosts = await getCollection<"posts">("posts", ({ data, id }) => {
+		// Filter by locale if provided
+		if (locale === "en") {
+			if (!id.startsWith("en/")) return false;
+		} else if (locale === "ja" || !locale) {
+			// For Japanese (default), exclude English posts
+			if (id.startsWith("en/")) return false;
+		}
 		return import.meta.env.PROD ? data.draft !== true : true;
 	});
 
@@ -75,8 +89,15 @@ export type Category = {
 	url: string;
 };
 
-export async function getCategoryList(): Promise<Category[]> {
-	const allBlogPosts = await getCollection<"posts">("posts", ({ data }) => {
+export async function getCategoryList(locale?: string): Promise<Category[]> {
+	const allBlogPosts = await getCollection<"posts">("posts", ({ data, id }) => {
+		// Filter by locale if provided
+		if (locale === "en") {
+			if (!id.startsWith("en/")) return false;
+		} else if (locale === "ja" || !locale) {
+			// For Japanese (default), exclude English posts
+			if (id.startsWith("en/")) return false;
+		}
 		return import.meta.env.PROD ? data.draft !== true : true;
 	});
 	const count: { [key: string]: number } = {};
@@ -104,7 +125,7 @@ export async function getCategoryList(): Promise<Category[]> {
 		ret.push({
 			name: c,
 			count: count[c],
-			url: getCategoryUrl(c),
+			url: getCategoryUrl(c, locale),
 		});
 	}
 	return ret;

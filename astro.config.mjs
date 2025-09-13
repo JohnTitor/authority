@@ -29,6 +29,13 @@ export default defineConfig({
 	site: "https://www.oshino.meme",
 	base: "/",
 	trailingSlash: "always",
+	i18n: {
+		defaultLocale: "ja",
+		locales: ["ja", "en"],
+		routing: {
+			prefixDefaultLocale: false,
+		},
+	},
 	integrations: [
 		tailwind({
 			nesting: true,
