@@ -22,7 +22,22 @@ export function getTranslation(lang: string): Translation {
 	return map[lang.toLowerCase()] || defaultTranslation;
 }
 
+let forcedLocale: string | undefined;
+
+export function setI18nLocale(lang: string | undefined): void {
+	forcedLocale = lang;
+}
+
+function resolveLocale(): string {
+	if (forcedLocale) return forcedLocale;
+	if (typeof document !== "undefined") {
+		const htmlLang = document.documentElement.getAttribute("lang");
+		if (htmlLang) return htmlLang.split("-")[0];
+	}
+	return siteConfig.lang || "en";
+}
+
 export function i18n(key: I18nKey): string {
-	const lang = siteConfig.lang || "en";
+	const lang = resolveLocale();
 	return getTranslation(lang)[key];
 }

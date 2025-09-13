@@ -8,6 +8,8 @@ image: ''
 draft: false
 lang: 'en'
 ---
+> [!WARNING]
+> This article is translated by AI and may contain a serious mistake.
 
 ## Contribution summary
 

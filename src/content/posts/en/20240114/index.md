@@ -6,31 +6,33 @@ description: 'diary: 20240114'
 category: 'diary'
 image: ''
 draft: false
-lang: 'ja'
+lang: 'en'
 ---
+> [!WARNING]
+> This article is translated by AI and may contain a serious mistake.
 
-「お、お嬢様！私も成長して最近はリセットすることもなくなりました！」
+“M-My lady! I’ve grown, and lately I don’t reset relationships anymore!”
 
-「それは単にリセットする人間関係がなくなってしまっただけってどうして気付けないの？」
+“That’s only because you no longer have relationships to reset—how can you not notice?”
 
-「お、お嬢様……」
+“M-My lady…”
 
-リセットすると関係の再構築が手間だし、バツが悪い顔をしなくちゃあいけないのも大変なので、それはそれでいいのだと思う。
-
----
-
-12月は酔狂のためほぼ毎日部屋を出ていたが1月になって落ち着いた。そのせいで思考に使う時間がまた戻ってきてしまった。結果何もできない肉塊の再誕生である。
-
----
-
-数年前、日記を書いていたときは露悪的だろうが何だろうがとにかく文章まがいのものは生成できていたのに、今はもうその脳機能すら退化してしまっている。
-
-華であるうちに幕引きとしたい思いは今も強いが、やはりありえるかもしれない何かへの期待を捨てきれない。
-
-投資で成功するにはいかに損切りの判断を躊躇なく行えるかが肝要らしい。
-
-僕は一生成功できないんだろうな。
+Resetting is a hassle because rebuilding relationships takes work, and you have to make an embarrassed face—so in that sense, not resetting might be fine.
 
 ---
 
-世の中には潤んだ目で有難がって施しを受けてくれる弱者と思うように掌握できない救いようのない弱者とがいて、前者からあぶれたものを後者で括ってしまうのが、強者である方々の責任の一切を押し付けてしまえるのが楽でいいから、みんなつい同調してしまうの。
+In December I went out nearly every day on a whim, but things calmed down in January. That brought back time for thinking—and as a result, I’ve been reborn as a lump that can’t do anything.
+
+---
+
+A few years ago, when I kept a diary, I could produce something resembling writing no matter how self-exposing it was. Now even that brain function has atrophied.
+
+I still strongly want to take a bow while I’m still a blossom, but I can’t let go of my expectations for something that might yet be.
+
+To succeed in investing, they say it’s essential to make cut-loss decisions without hesitation.
+
+I’ll probably never succeed.
+
+---
+
+There are those who gratefully accept charity with moist eyes, and those hopeless ones who can’t be controlled as you wish. It’s convenient to lump the overflow from the former into the latter, because it lets the strong shrug off all responsibility—and everyone casually goes along with that.

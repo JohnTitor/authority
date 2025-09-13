@@ -6,57 +6,59 @@ description: 'The state of @JohnTitor, 2023'
 category: 'report'
 image: ''
 draft: false
-lang: 'ja'
+lang: 'en'
 ---
+> [!WARNING]
+> This article is translated by AI and may contain a serious mistake.
 
-LoLの配信観ながら寝落ちしてたら年が明けていました。振り返りと抱負、やっていきます。
+I fell asleep watching a LoL stream, and when I woke up, the new year had begun. Here are my reflections and resolutions.
 
-## 旅行
+## Travel
 
-北海道、関東、関西、南九州、そして韓国。色々行きました。
+Hokkaido, Kanto, Kansai, South Kyushu, and Korea—I visited a lot of places.
 
-特に東京は素晴らしいホテルが密集していてよいのですが、転居後はめっきり行かなくなってしまいました。荷物も少なく済むし悪くないとは思うのですが結局機会なく2023年を終えてしまいました。
+Tokyo in particular has a high concentration of great hotels, which I love, but since moving, I’ve barely gone. Traveling light is nice enough, but in the end, I finished 2023 without finding the chance.
 
-2024年は海外にも足を向けられたらと思います。vs. 円安。
+In 2024, I hope to set foot abroad—despite the weak yen.
 
-## 転居
+## Moving
 
-夏の盛りに東京に居を移しました。
+In the height of summer, I moved to Tokyo.
 
-2023年上半期に東京まで行く機会が多くその支度が面倒になってしまったことを始め色々が重なった結果です。
+In the first half of 2023, I had many occasions to go to Tokyo, and the hassle of preparing for each trip piled up—among other reasons—and I ended up moving.
 
-お上りさんらしく、この地の便利さに日々感心しています。催事が頻繁にあって、その日の気分で足を運べる環境にあるというのはとても恵まれています。
+Like a typical newcomer to the big city, I’m impressed every day by the convenience. There are frequent events, and it’s a blessing to be able to go on a whim.
 
-外に出る機会も豊富に設けられ、しかも身近なのでふらふらする日が増えました。歩いて健康になった分喫煙の量を増やして不健康を維持しています。
+I also go out more often now, and since everything’s close by, I wander around a lot. I maintain my unhealthiness by increasing my smoking in proportion to the health I gain from walking.
 
-## 職
+## Work
 
-現職ではプラットフォームチームの組閣から初動までを行いました。
+At my current job, I organized and kicked off the platform team.
 
-色々と試行錯誤していますが、遊撃手のような立ち振舞は好きなので日々楽しみながらお仕事できています。幸せ。
+I’m trying a lot of things, and I enjoy operating like a utility player—so I’m happy.
 
-外の人々とも色々お話しました。
+I also spoke with many people outside the company.
 
-技術面はおいといて、行動面でのミスマッチと精神面での不安定さを嫌われることが多かったです。そこを覆すほどのﾊﾟｩﾜｰや不安を払拭する材料を持ち合わせていないということでもあります。
+Putting aside the technical side, many people disliked the mismatch in behavior and my mental instability. It also means I didn’t have enough “power” or reassurance to overturn that impression.
 
-一つ人生の転機があったのですが、俺は大事なときほどトチるのでみすみすそれを逃しています。
+There was a turning point in my life, but I missed it, as I tend to blow it at critical moments.
 
-身体を洗う順番、左右どちらから靴を履くか、そういった自分の中での決め事を重要視するきらいがあり、今回はそれを破る形で選択をしてしまったことで悔恨の念が拭えません。直感に反する選択をするとどうあれ後悔を大きく感じてしまいます。学びです。
+I have a habit of valuing my own internal rules—like the order I wash my body, or which shoe I put on first—and this time I made a choice that broke those, which left me with a regret I can’t shake. When I go against my intuition, I feel great regret no matter the outcome. A lesson learned.
 
 ## OSS
 
-副業を始めたこともあり、コントリビューションに割く時間が少なくなってしまい、結果進捗もそこまでついてこない結果になってしまいました。
+Since I started side gigs, I’ve had less time to devote to contributions, and as a result, progress hasn’t followed as much.
 
-最低限レビューだけはできるだけ滞りなく回すようにはできたので壊滅はしていませんが、2023年の目標であったlibc crateのmajor releaseはついぞ達成できませんでした。
+I managed to keep reviews going without much delay, so it wasn’t disastrous, but I ultimately failed to achieve my 2023 goal of a major release of the libc crate.
 
-ただ、そこまでのロードマップ・TODOリスト作成はできていて、ある程度の算段もついているので2024年こそは、という感じです。
+However, I’ve created a roadmap and TODO list, and have a rough plan, so hopefully 2024 is the year.
 
-経済的にはどうしても比較的安定的な収入源となる副業を優先してしまいがちで、本業を含めたその他収入部をもう少し大きくしないと現状を変えられないので歯痒い思いが募ります。
+Economically, I tend to prioritize side gigs that provide relatively stable income. Unless I increase the rest—including my main job—it’s frustrating because I can’t change the current situation.
 
-## 2024年
+## 2024
 
-生存を目標にやっていきます。
+I’ll focus on survival.
 
-今でも意識が途切れ得ることに恐怖を感じますが、名取の死生観・終活観のような力の抜き方を身に着けたいです。
+I still fear that my consciousness can go blank, but I want to learn a way of letting go, like Natori’s views on life and death and end-of-life.
 
-ひとまず、俺の葬式で流す曲でも探そうと思います。
+For now, I think I’ll look for a song to play at my funeral.

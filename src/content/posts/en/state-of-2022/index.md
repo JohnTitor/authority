@@ -8,6 +8,8 @@ image: './state-of-2022/contributions2022.png'
 draft: false
 lang: 'en'
 ---
+> [!WARNING]
+> This article is translated by AI and may contain a serious mistake.
 
 ## The stats
 

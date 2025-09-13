@@ -1,41 +1,43 @@
 ---
 published: 2025-06-14
-title: '転職2025'
-tags: [diary, japanese]
-description: '転職をしたときの記録2025'
+title: 'Job Change 2025'
+tags: [diary]
+description: 'Notes on changing jobs in 2025'
 category: 'diary'
 image: './20250614/left.png'
 draft: false
-lang: 'ja'
+lang: 'en'
 ---
+> [!WARNING]
+> This article is translated by AI and may contain a serious mistake.
 
-2025年4月末で株式会社カナリーを退職し、5月にMOSH株式会社に入社しました。そろそろ落ち着いたので退職・転職エントリを拵えようと思います。
+I left Canary at the end of April 2025 and joined MOSH in May. Now that things have settled down, I’d like to jot down a short entry about the transition.
 
-## Canaryでやったこと
+## What I did at Canary
 
-Canaryでは最初の1年間をバックエンドエンジニアとして過ごしたあと、プラットフォームチームの立ち上げに伴いプラットフォームエンジニアにジョブチェンジしました。
+After spending my first year as a backend engineer, I switched to a platform engineer role as the platform team launched.
 
-立ち上げ当初はフルタイムメンバーが自分しかおらず、また事例の少ない分野でもあったため色々手探りの状態からのスタートでしたが、今ではチームの規模も拡大しやってきたことも積み重なってきました。
-IaCやCIのsecurity hardeningやk8s cluster/GAR/third-party servicesなどの移行作業、エラーレートを下げる・O11yを強化するなどのSRE的作業まで色々泥臭くやってきました。
+At the very beginning, I was the only full-time member, and it was a field with few precedents, so I started out groping in the dark. Since then, the team has grown and the work has accumulated.
+I did a lot of gritty work, from IaC and CI security hardening to migrations of k8s clusters/GAR/third-party services, reducing error rates, and strengthening O11y in an SRE-ish fashion.
 
-労働環境もとてもよく、出社・フルリモートの裁量や生成AIツールの利用補助など福利厚生もしっかりしていた印象です。
+The working environment was excellent as well. I had autonomy over office/remote work, and there were solid benefits like support for using generative AI tools.
 
-## なぜやめたの？
+## Why did I leave?
 
-熱意に負けました。
-内面的な話として、自分ならではの価値提供ができるという部分に強い自己肯定感を覚えるというのがあり、そこをくすぐられました。
-切嗣も言っていましたが、誰かを助けるということは誰かを助けないということです。
-Canaryのプラットフォームチームはすでに自分抜きでも回るようになっており、2年前とは大きく変わって自分も安心して退職できるようになっていました。
-その中でより自分が手助けできる環境を求めた結果が今回の転職に繋がりました。
+Passion won out.
+On an internal level, I have strong self-affirmation when I can provide value that only I can. That chord was struck.
+As Kiritsugu said, helping someone means not helping someone else.
+Canary’s platform team had reached a point where it could run without me, unlike two years ago, and I could leave with peace of mind.
+Seeking an environment where I could help more directly led to this job change.
 
-## 次何やるの？
+## What’s next?
 
-2025年5月よりMOSH株式会社に入社しました。
+I joined MOSH in May 2025.
 
-MOSHではプロダクティビティチーム所属のSWEとして、技術基盤をはじめとした改善活動に取り組んでいます。やっていくことは大枠変わりませんが、幾分見える景色が違うので新鮮な気持ちです。
+At MOSH, I’m a SWE on the Productivity team, working on improvements starting with the technical foundation. The overall scope isn’t drastically different, but the scenery is somewhat new and refreshing.
 
-早く対外的に見せられる成果を作れたらな～という思いでやっていきです。
+I hope to produce externally visible results soon—and keep pushing.
 
-## 例のリンク
+## The usual link
 
-[Sponsors](https://github.com/sponsors/JohnTitor) 待ってます。
+[Sponsors](https://github.com/sponsors/JohnTitor) appreciated.

@@ -6,101 +6,101 @@ description: 'The state of @JohnTitor, 2024'
 category: 'report'
 image: ''
 draft: false
-lang: 'ja'
+lang: 'en'
 ---
+> [!WARNING]
+> This article is translated by AI and may contain a serious mistake.
 
-「恥を忍んで思い出を捨てて、そうやって忘れた振りをして同じ過ちを重ねていくのよ。きっと、これからも」
+“Swallow your pride, throw away your memories, pretend you’ve forgotten, and keep repeating the same mistakes. I’m sure we will, from here on too.”
 
-知足だなんてとんとお門違い！
+“Being content” is completely off the mark!
 
-## 仕事/engineering
+## Work / Engineering
 
-### day job
+### Day job
 
-分岐のあった2022や2023に比べると落ち着いていたと思う。
-それに付随する悔恨がないだけ穏やかだったが、凪をどう捉えるかは人に依る。
+Compared to the branching years of 2022 and 2023, this year felt calmer.
+It was peaceful partly because there was no accompanying regret, but how you interpret a lull depends on the person.
 
-主な業務としてAGI極振りだった部分をVITやDEXに振り直す作業を延延とやっていた。
-IaCとそれの自動化、O11y、そしてGoogle Cloudまわりについてまた一つ賢くなった。
-インフラコスト削減も色色やっていて、チームでの取り組みとして売上比そこそこの割合で改善を施すことができたのもよかった。無駄を嫌え。
+For the most part, I spent the year reallocating my maxed-out AGI to VIT and DEX, so to speak.
+I became a bit wiser about IaC and its automation, observability, and Google Cloud.
+We also did a lot to reduce infrastructure costs, and as a team we managed to improve the cost-to-revenue ratio by a fair amount. Hate waste.
 
-少ないながら記事も2つ書いた。
+I wrote two articles, albeit few:
 
-- [Datadog AgentをGKE autopilot環境に導入する際のtips](https://zenn.dev/canary_techblog/articles/1bd40c435bd69e)
-- [tfaction v1.3.0ではlocal modulesの更新でtfactionをtriggerできるようになった](https://zenn.dev/canary_techblog/articles/bcb7a8a249d6ff)
+- [Tips for installing Datadog Agent on a GKE Autopilot environment](https://zenn.dev/canary_techblog/articles/1bd40c435bd69e)
+- [In tfaction v1.3.0, updates to local modules can now trigger tfaction](https://zenn.dev/canary_techblog/articles/bcb7a8a249d6ff)
 
-年年文章が出てくるまでのスピードが落ちているので、リハビリも兼ねて今年も書けると嬉しい。
+My writing speed has been slowing year by year, so I’d be happy if I can keep writing this year as rehab.
 
-反省点する箇所はスケジュール管理。
-platform teamという立場上、それぞれのstream-aligned teamとの折衝が発生するのだが、それを織り込んだ線の引き方を学ぶ必要があった。
-ことplatform engineeringにおけるproduct managementをどうするかという話は難しく、そのあたりの勘所を養っていかねばならない。
-軋轢で死んでしまいそう。
-個人的な改善案として、もう少し小さい単位でreviewを挟んでいくことを心掛けたい。
+One point to reflect on is schedule management.
+As a platform team, we constantly negotiate with each stream-aligned team, and I needed to learn how to draw lines that factor that in.
+Product management in platform engineering is particularly difficult; I have to cultivate a feel for it.
+Sometimes the friction makes me feel like I’m going to die.
+As a personal improvement, I want to insert reviews in smaller chunks more intentionally.
 
-チームとしての最良のパフォーマンスを気にしすぎるがあまり、個人のそれを疎かにしすぎた部分もあった。
-ただ他人を押しのけてまで大成したいかと言われるとそうでもないので難しい。
-人間には幸せであってほしい。
-そのためには喜んで身を退ける……のがよくないんだろう。
+Out of concern for the team’s best performance, I sometimes neglected my own too much.
+But I don’t really want to succeed by pushing others aside, so it’s hard.
+I want people to be happy.
+And yet I keep gladly stepping back… which probably isn’t good.
 
 ### FLOSS
 
-FLOSSでのあれこれを始めて最も活動が少ない年だったように思う。
-可処分時間の扱いをより私的なことに回したく、Rustを始め様様な活動を縮小したりチームを抜けたりした。
-alumniとして小うるさいことを言っていこうと思う。嘘だけど。
+It was probably my least active year since I started doing FLOSS-y things.
+I wanted to dedicate more of my disposable time to personal matters, so I scaled down Rust and other activities and left some teams.
+I thought I’d keep being a nitpicky alumnus. (Kidding.)
 
-FLOSSだけで経済的に自立するのは結構難しい。
-engineeringだけではなくbrandingも必要だからだ。
-良し悪しはともかく事実として何をやったかというよりは何を喧伝したかで大きく変わる部分があり、そこに迎合できないとbenefactorに見つけてもらえないという問題がある。
-広報もFLOSSを助ける手段ではあるのだが、古のインターネット仕草としての嫌儲も邪魔して自分はそこに力を入れる気になれなかった。
+It’s quite hard to be financially independent on FLOSS alone.
+You need branding in addition to engineering.
+For better or worse, in reality it often depends less on what you did and more on how loudly you trumpeted it, and if you can’t go along with that, benefactors won’t find you.
+PR is indeed a way to help FLOSS, but my old-internet anti-commercial ethos kept me from putting effort there.
 
-それはそれとして、経験としてみると十分有効だし、自分のような"学歴なし・キャリアなし"を補うものとしてかなり強力に作用すると思う。
-現況に苦しむ未来ある若人は宣伝含め遮二無二やっていってほしい。
-おじさんの屍を越えてくれ。
+That said, as experience it’s absolutely valuable, and for someone like me with “no academic credentials, no career,” it works powerfully as a compensator.
+To the young with a future who are struggling: keep doing it, including promotion. Step over this old man’s corpse.
 
-## 私事
+## Personal
 
-### ライフイベント
+### Life events
 
-結婚した。
-一生根無し草だと思っていたので自分でも驚いて、笑っている。今でもそう。
-2023は思い立ったが吉日を守らなかったがための悔恨が存在したが、これでうまくその経験を活用できたので無駄にならずよかった。
-人生何がどう転ぶかわからないものだ。
+I got married.
+I always thought I’d be a rootless drifter, so even I’m surprised—and still smiling about it.
+In 2023 I had regrets because I failed to strike while the iron was hot, but this time I was able to put that experience to use, so it didn’t go to waste. You never know how life will turn.
 
 ### LoL
 
-2024年何に一番時間を割いたかを考えるとLoLになると思う。
+If I think about what I spent the most time on in 2024, it’d be LoL.
 
-精神的な依存先を分散させるのがとても苦手なのだが、ここで職場とはまた違った人間関係を構築できたのは僥倖だった。
-いろんな人間を知ることが好きなので、普段engineeringだけやっていれば出会うことのない人種と交流できる場としてうまく機能していた。
+I’m terrible at diversifying emotional dependencies, so being able to build relationships different from work here was a stroke of luck.
+I like getting to know different kinds of people, and this functioned well as a place to interact with people I wouldn’t normally meet if I only did engineering.
 
-さておきADCがつらい環境はそろそろやめてほしい。
+That said, I wish the environment would stop being so harsh on ADC.
 
-### 旅行
+### Travel
 
-> 2024年は海外にも足を向けられたらと思います。
-> 
+> I hope I can even set foot overseas in 2024.
+>
 > Yuki Okushi 2024, ‘The state of @JohnTitor, 2023’, _2k36_, weblog post, 1 Jan, accessed 18 Jan 2025, <https://www.oshino.meme/posts/the-state-of-johntitor-2023>.
 
-夏にハワイを訪れたので無事達成できた。日差しの強さはあったが比較的過ごしやすく、ビーチやマイ・タイなど"らしい"体験も色色とできた。
+I managed to achieve it by visiting Hawaii in the summer. The sun was strong, but it was relatively comfortable, and I got to enjoy “typical” experiences like the beach and Mai Tai.
 
-冬に訪れたコンラッド大阪は非常に体験がよかった。2024に国内で唯一また行きたいリストに追加されたホテル。
+The Conrad Osaka I visited in winter was excellent. It was the only domestic hotel added to my “want to revisit” list in 2024.
 
-小咄として、外資系ホテルにて白髪カラコン付という装いをやっていると英語で話しかけられることが多いというのがあり、少し面白い。辿辿しいと日本語に切り替えられ、そうなると負けた気分になる。今年は負けたくない。
+As a little anecdote, when I’m at foreign-chain hotels dressed with white hair and colored contacts, people often speak to me in English—which I find a bit funny. When my faltering speech makes them switch to Japanese, I feel like I’ve lost. I don’t want to lose this year.
 
-2、3年ぶりにクリスマスマーケットにも行った。久久に飲んだグリューワインは別世界の味がした。
+I also went to a Christmas market for the first time in a couple of years. The mulled wine I had after a long while tasted like another world.
 
-### 今後
+### Going forward
 
-『悪の教典』には、意気揚揚と海を渡った蓮実（主人公）がより強大な存在に打ちひしがれて、自分が踊れる舞台はここではないと悟る描写がある。結局彼は強者に怯えるホオジロザメではなく、メガロドンとして舞うことのできる場所として日本の高校を選んだ。
-そういう悟りで楽になる反面、泳ぎ続けていないと死んでしまうという恐怖もある。
-何が相応しいんだろう。
+In “The Lesson of Evil,” there’s a scene where Hasumi (the protagonist), who crossed the sea in high spirits, is crushed by a greater force and realizes this isn’t a stage where he can dance. In the end, he chooses a Japanese high school as the place where he can dance like a megalodon, not a great white shark fearing the strong.
+Such enlightenment makes things easier, but there’s also the fear that if you stop swimming you’ll die.
+What is truly appropriate for me?
 
-「おみゃーは剃刀みてぇでよ、切れ味はいいんだがちょっとしたことですぐ折れちまう。ナタみてぇに鈍くても巨木相手にびくともしねぇやつが結局世の中生き残っていくもんさ」といった話をされた。
-なるほど生きる上ではそういう感性が大事なのかもしれない。楽でもある。
-ただそういう図太さみたいなもので何かが見えなくなってしまったら、それこそ生きている意味がない。
-今見えている綺麗なものを一生愛でていたい。
-壁に向かってする誰に向けたものでもないビクトリーポーズを、まだやめたくない。
+Someone once told me: “You’re like a razor blade—sharp, but you snap easily at small things. In the end, it’s the hatchet—dull but unmoving even against big trees—that survives in this world.”
+I see; perhaps that sense is important for living. It’s easier, too.
+But if such thick skin makes me unable to see something, then there’s no point to living.
+I want to keep admiring the beautiful things I can see now for the rest of my life.
+I don’t want to stop making a victory pose to no one in particular, facing the wall.
 
 ---
 
-今の僕はどうだろう。残照を振り切って正しく踊れているだろうか。忍ぶものも、もう見えなくなってしまっただろうか。
+How am I now? Am I shaking off the afterglow and dancing properly? Have the things I should endure already become invisible?

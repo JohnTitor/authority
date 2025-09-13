@@ -46,8 +46,11 @@ function hidePanel() {
 
 <div class="relative z-50" role="menu" tabindex="-1" onmouseleave={hidePanel}>
 	<button aria-label="Language" role="menuitem" type="button" class="relative btn-plain scale-animation rounded-lg h-11 w-11 active:scale-90" id="lang-switch" onclick={toggleLocale} onmouseenter={showPanel}>
-		<div class="absolute">
-			<Icon icon="material-symbols:translate" class="text-[1.25rem]" />
+		<div class="absolute" class:opacity-0={locale !== "ja"}>
+			<Icon icon="material-symbols:language-japanese-kana" class="text-[1.25rem]" />
+		</div>
+		<div class="absolute" class:opacity-0={locale !== "en"}>
+			<Icon icon="material-symbols:language-us" class="text-[1.25rem]" />
 		</div>
 	</button>
 
@@ -57,14 +60,14 @@ function hidePanel() {
 					class:current-theme-btn={locale === "ja"}
 					onclick={() => switchLocale("ja")}
 			>
-				<Icon icon="line-md:translate" class="text-[1.25rem] mr-3" />
+				<Icon icon="material-symbols:language-japanese-kana" class="text-[1.25rem] mr-3" />
 				日本語
 			</button>
 			<button type="button" class="flex transition whitespace-nowrap items-center !justify-start w-full btn-plain scale-animation rounded-lg h-9 px-3 font-medium active:scale-95"
 					class:current-theme-btn={locale === "en"}
 					onclick={() => switchLocale("en")}
 			>
-				<Icon icon="line-md:translate" class="text-[1.25rem] mr-3" />
+				<Icon icon="material-symbols:language-us" class="text-[1.25rem] mr-3" />
 				English
 			</button>
 		</div>

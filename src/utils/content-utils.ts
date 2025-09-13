@@ -22,7 +22,9 @@ async function getSortedPostsInternal(locale?: string) {
 	});
 }
 
-export async function getSortedPosts(locale?: string): Promise<CollectionEntry<"posts">[]> {
+export async function getSortedPosts(
+	locale?: string,
+): Promise<CollectionEntry<"posts">[]> {
 	const sorted = await getSortedPostsInternal(locale);
 
 	for (let i = 1; i < sorted.length; i++) {
@@ -37,9 +39,9 @@ export async function getSortedPosts(locale?: string): Promise<CollectionEntry<"
 	return sorted;
 }
 
-export async function getSortedPostsMetadata(locale?: string): Promise<
-	Omit<CollectionEntry<"posts">, "body" | "render">[]
-> {
+export async function getSortedPostsMetadata(
+	locale?: string,
+): Promise<Omit<CollectionEntry<"posts">, "body" | "render">[]> {
 	const sorted = await getSortedPostsInternal(locale);
 
 	// Return posts with metadata only (excluding body content)
