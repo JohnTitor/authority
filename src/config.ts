@@ -28,7 +28,7 @@ export const navBarConfig: NavBarConfig = {
 export const profileConfig: ProfileConfig = {
 	avatar: "assets/images/avatar.webp",
 	name: "Yuki Okushi",
-	bio: "FLOSS nerd, Warrior of Light, and Aphelios OTP",
+	bio: "Japanese codewriting ninja",
 	links: [
 		{
 			name: "GitHub",

@@ -11,6 +11,7 @@ import {
 	PAGE_WIDTH,
 } from "../constants/constants";
 import { defaultFavicons } from "../constants/icon";
+import { setI18nLocale } from "../i18n/translation";
 import type { Favicon } from "../types/config";
 import { url } from "../utils/url-utils";
 
@@ -23,6 +24,11 @@ interface Props {
 }
 
 let { title, description, lang, setOGTypeArticle, ogImage } = Astro.props;
+
+const urlLocale =
+	Astro.url.pathname.startsWith("/en/") || Astro.url.pathname === "/en"
+		? "en"
+		: "ja";
 
 // defines global css variables
 // why doing this in Layout instead of GlobalStyles: https://github.com/withastro/astro/issues/6728#issuecomment-1502203757
@@ -40,8 +46,9 @@ const favicons: Favicon[] =
 
 // const siteLang = siteConfig.lang.replace('_', '-')
 if (!lang) {
-	lang = `${siteConfig.lang}`;
+	lang = urlLocale || `${siteConfig.lang}`;
 }
+setI18nLocale(lang);
 const siteLang = lang.replace("_", "-");
 ---
 
@@ -186,7 +193,7 @@ const siteLang = lang.replace("_", "-");
 </style>
 
 <script>
-import {getHue, getStoredTheme, setHue, setTheme} from "../utils/setting-utils";
+import { getHue, getStoredTheme, setHue, setTheme } from "../utils/setting-utils";
 
 let OverlayScrollbars: any;
 let isScrollbarLoaded = false;

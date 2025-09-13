@@ -1,0 +1,8 @@
+- `en` routeをそれぞれのページに用意してください
+- contentsはすでにen dirを持っています
+- 'ja' をデフォルトとし、これはパスには出さないでください。
+  - e.g. ja: `/about`, en: `/en/about`
+- UI stringsのことは一旦考えなくてよいです
+- language switcherも一旦考えなくていいです
+- 公式docsはこれ: https://docs.astro.build/en/recipes/i18n/
+  - ただしこれに囚われず不必要に差分を大きくしないような実装で
