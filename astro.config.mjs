@@ -1,6 +1,5 @@
 import sitemap from "@astrojs/sitemap";
 import svelte from "@astrojs/svelte";
-import tailwind from "@astrojs/tailwind";
 import { pluginCollapsibleSections } from "@expressive-code/plugin-collapsible-sections";
 import { pluginLineNumbers } from "@expressive-code/plugin-line-numbers";
 import swup from "@swup/astro";
@@ -21,6 +20,7 @@ import { parseDirectiveNode } from "./src/plugins/remark-directive-rehype.js";
 import { remarkExcerpt } from "./src/plugins/remark-excerpt.js";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 import { pluginCustomCopyButton } from "./src/plugins/expressive-code/custom-copy-button.js";
+import tailwindcss from "@tailwindcss/vite";
 
 import partytown from "@astrojs/partytown";
 
@@ -37,9 +37,6 @@ export default defineConfig({
 		},
 	},
 	integrations: [
-		tailwind({
-			nesting: true,
-		}),
 		swup({
 			theme: false,
 			animationClass: "transition-swup-", // see https://swup.js.org/options/#animationselector
@@ -162,6 +159,7 @@ export default defineConfig({
 		],
 	},
 	vite: {
+		plugins: [tailwindcss()],
 		build: {
 			cssCodeSplit: true,
 			rollupOptions: {
