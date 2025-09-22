@@ -46,7 +46,7 @@ importers:
         version: 1.2.34
       '@iconify/svelte':
         specifier: ^5.0.0
-        version: 5.0.1(svelte@5.38.10)
+        version: 5.0.2(svelte@5.38.10)
       '@swup/astro':
         specifier: ^1.6.0
         version: 1.7.0(@types/babel__core@7.20.5)
@@ -1060,8 +1060,8 @@ packages:
   '@iconify-json/material-symbols@1.2.34':
     resolution: {integrity: sha512-qOn1q0lMlLvSHTci0sabhKbfQ3h2XfahsoSWMy2X7eITQRoKrENuFKPB9x2bpvq+d1XxPiz/4UTFgfy/ejiFmg==}
 
-  '@iconify/svelte@5.0.1':
-    resolution: {integrity: sha512-nR1ApafyeRDcsx6ytd+0mzaY0ASYfG5YBW9dN8rUWxwi792/HX401qAZEkXSjT0iHm2Dgua+PwXDs/3ttJhkqQ==}
+  '@iconify/svelte@5.0.2':
+    resolution: {integrity: sha512-1iWUT+1veS/QOAzKDG0NPgBtJYGoJqEPwF97voTm8jw6PQ6yU0hL73lEwFoTGMrZmatLvh9cjRBmeSHHaltmrg==}
     peerDependencies:
       svelte: '>4.0.0'
 
@@ -6303,7 +6303,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify/svelte@5.0.1(svelte@5.38.10)':
+  '@iconify/svelte@5.0.2(svelte@5.38.10)':
     dependencies:
       '@iconify/types': 2.0.0
       svelte: 5.38.10
