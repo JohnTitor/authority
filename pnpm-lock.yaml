@@ -34,10 +34,10 @@ importers:
         version: 0.41.3
       '@fontsource-variable/jetbrains-mono':
         specifier: ^5.2.5
-        version: 5.2.7
+        version: 5.2.8
       '@fontsource-variable/noto-sans-jp':
         specifier: ^5.2.5
-        version: 5.2.7
+        version: 5.2.8
       '@iconify-json/line-md':
         specifier: ^1.2.8
         version: 1.2.11
@@ -1048,11 +1048,11 @@ packages:
   '@expressive-code/plugin-text-markers@0.41.3':
     resolution: {integrity: sha512-SN8tkIzDpA0HLAscEYD2IVrfLiid6qEdE9QLlGVSxO1KEw7qYvjpbNBQjUjMr5/jvTJ7ys6zysU2vLPHE0sb2g==}
 
-  '@fontsource-variable/jetbrains-mono@5.2.7':
-    resolution: {integrity: sha512-vwU6O4wv1h1BvEJUWaylorj0WZ3+GB3uVsgUH7IpGX/euSXm0UyTu6MWusk1pph562F8cBvuv41P4jufRogF4Q==}
+  '@fontsource-variable/jetbrains-mono@5.2.8':
+    resolution: {integrity: sha512-WBA9elru6Jdp5df2mES55wuOO0WIrn3kpXnI4+W2ek5u3ZgLS9XS4gmIlcQhiZOWEKl95meYdvK7xI+ETLCq/Q==}
 
-  '@fontsource-variable/noto-sans-jp@5.2.7':
-    resolution: {integrity: sha512-0uZ8EKCNG3W49uDDiZdhMOXICJIm2dmmmI8JOjIuq3Kt/2ZUgzkgdnSKWYLe0Ahk9jQpLVMU23tEOaGfPH7xQg==}
+  '@fontsource-variable/noto-sans-jp@5.2.8':
+    resolution: {integrity: sha512-oGjExI1HZqwXlGU9Xf8EacsF5F4H7Lq9ZKGgoem3dvA+Jt3dloHHHVzPGSxRzbkmu0bZEJRDGyadgW7Rkaremg==}
 
   '@iconify-json/line-md@1.2.11':
     resolution: {integrity: sha512-JYczKuKvTq/Pf9rSCoxwdBbAiWqceNrb3EtM3acD4YkzCAdp3co+CdNE/pb5lTURGbIA9GrGuqentHqVwXyVWA==}
@@ -6291,9 +6291,9 @@ snapshots:
     dependencies:
       '@expressive-code/core': 0.41.3
 
-  '@fontsource-variable/jetbrains-mono@5.2.7': {}
+  '@fontsource-variable/jetbrains-mono@5.2.8': {}
 
-  '@fontsource-variable/noto-sans-jp@5.2.7': {}
+  '@fontsource-variable/noto-sans-jp@5.2.8': {}
 
   '@iconify-json/line-md@1.2.11':
     dependencies:
