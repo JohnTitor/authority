@@ -79,7 +79,7 @@ That said, I wish the environment would stop being so harsh on ADC.
 
 > I hope I can even set foot overseas in 2024.
 >
-> Yuki Okushi 2024, ‘The state of @JohnTitor, 2023’, _2k36_, weblog post, 1 Jan, accessed 18 Jan 2025, <https://www.oshino.meme/posts/the-state-of-johntitor-2023>.
+> Yuki Okushi 2024, ‘The state of @JohnTitor, 2023’, _2k36_, weblog post, 1 Jan, accessed 18 Jan 2025, <https://www.2k36.org/posts/the-state-of-johntitor-2023>.
 
 I managed to achieve it by visiting Hawaii in the summer. The sun was strong, but it was relatively comfortable, and I got to enjoy “typical” experiences like the beach and Mai Tai.
 

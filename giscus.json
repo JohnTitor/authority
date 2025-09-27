@@ -1,6 +1,6 @@
 {
   "origins": [
-    "https://www.oshino.meme"
+    "https://www.2k36.org"
   ],
   "originsRegex": [
     "https://oshino-meme-git-([A-z0-9]|-)*yuki-okushis-projects\\.vercel\\.app",
