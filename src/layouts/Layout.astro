@@ -3,6 +3,7 @@ import "@fontsource-variable/noto-sans-jp";
 import "@fontsource-variable/jetbrains-mono";
 
 import ConfigCarrier from "@components/ConfigCarrier.astro";
+import SpeedInsights from "@vercel/speed-insights/astro";
 import { profileConfig, siteConfig } from "@/config";
 import {
 	AUTO_MODE,
@@ -139,6 +140,8 @@ const siteLang = lang.replace("_", "-");
 
 			gtag('config', 'G-V4WEXSY81M');
 		</script>
+
+		<SpeedInsights />
 	</head>
 	<body class=" min-h-screen transition " data-overlayscrollbars-initialize
 	>
