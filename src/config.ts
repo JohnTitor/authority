@@ -36,9 +36,9 @@ export const profileConfig: ProfileConfig = {
 			url: "https://github.com/JohnTitor",
 		},
 		{
-			name: "Mastodon",
-			icon: "line-md:mastodon",
-			url: "https://mastodon.online/@ggwp",
+			name: "Bluesky",
+			icon: "line-md:bluesky",
+			url: "https://bsky.app/profile/2k36.org",
 		},
 		{
 			name: "LinkedIn",
