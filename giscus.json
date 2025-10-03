@@ -3,7 +3,7 @@
     "https://www.2k36.org"
   ],
   "originsRegex": [
-    "https://oshino-meme-git-([A-z0-9]|-)*yuki-okushis-projects\\.vercel\\.app",
+    "https://2k36-git-([A-z0-9]|-)*yuki-okushis-projects\\.vercel\\.app",
     "http://localhost:[0-9]+"
   ]
 }
