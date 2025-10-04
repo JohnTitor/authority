@@ -13,6 +13,7 @@ import rehypeComponents from "rehype-components"; /* Render the custom directive
 import rehypeSlug from "rehype-slug";
 import remarkDirective from "remark-directive"; /* Handle directives */
 import remarkGithubAdmonitionsToDirectives from "remark-github-admonitions-to-directives";
+import remarkLinkCard from "remark-link-card-plus";
 import remarkSectionize from "remark-sectionize";
 import { expressiveCodeConfig } from "./src/config.ts";
 import { pluginCustomCopyButton } from "./src/plugins/expressive-code/custom-copy-button.js";
@@ -114,6 +115,15 @@ export default defineConfig({
 			remarkExcerpt,
 			remarkGithubAdmonitionsToDirectives,
 			remarkDirective,
+			[
+				remarkLinkCard,
+				{
+					cache: true,
+					shortenUrl: true,
+					thumbnailPosition: "right",
+					noFavicon: true,
+				},
+			],
 			remarkSectionize,
 			parseDirectiveNode,
 		],
