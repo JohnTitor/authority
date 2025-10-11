@@ -1,0 +1,76 @@
+---
+import MainGridLayout from "@layouts/MainGridLayout.astro";
+import sponsors from "../../../sponsors.json";
+
+// Group sponsors by tier amount
+const sponsorsByTier = sponsors.reduce(
+	(acc, sponsor) => {
+		const tierAmount = sponsor.tier.monthlyPriceInDollars;
+		if (!acc[tierAmount]) {
+			acc[tierAmount] = [];
+		}
+		acc[tierAmount].push(sponsor);
+		return acc;
+	},
+	{} as Record<number, typeof sponsors>,
+);
+
+// Get tier amounts sorted in descending order
+const sortedTierAmounts = Object.keys(sponsorsByTier)
+	.map(Number)
+	.sort((a, b) => b - a);
+---
+
+<MainGridLayout title="Sponsors" description="Thank you to all my sponsors!">
+	<div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
+		<div class="card-base z-10 px-9 py-6 relative w-full">
+			<h1 class="text-4xl font-bold mb-6 dark:text-neutral-50 ">Sponsors</h1>
+			<p class="text-lg mb-6 opacity-80 dark:text-neutral-50 ">
+				Thank you to all my wonderful sponsors! Your support means a lot.
+			</p>
+
+			<a
+				href="https://github.com/sponsors/JohnTitor"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="inline-flex items-center gap-2 px-6 py-3 mb-8 btn-regular rounded-lg font-semibold"
+			>
+				Become a sponsor
+			</a>
+
+			{sortedTierAmounts.map((tierAmount) => {
+				const tierSponsors = sponsorsByTier[tierAmount];
+				const tierName = tierSponsors[0].tier.name;
+
+				return (
+					<div class="mb-10">
+						<h2 class="text-2xl font-semibold mb-4 dark:text-neutral-50">
+							{tierName} ({tierSponsors.length} {tierSponsors.length === 1 ? "sponsor" : "sponsors"})
+						</h2>
+						<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+							{tierSponsors.map((sponsor) => (
+								<a
+									href={`https://github.com/${sponsor.username}`}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="group flex items-center gap-4 p-4 rounded-lg hover:bg-(--btn-plain-bg-hover) active:bg-(--btn-plain-bg-active) transition"
+								>
+									<img
+										src={sponsor.profilePicUrl}
+										alt={sponsor.name}
+										class="w-12 h-12 rounded-full"
+										loading="lazy"
+									/>
+									<div class="flex-1">
+										<div class="font-medium text-75 group-hover:text-(--primary) transition">{sponsor.name}</div>
+										<div class="text-sm text-50 transition">@{sponsor.username}</div>
+									</div>
+								</a>
+							))}
+						</div>
+					</div>
+				);
+			})}
+		</div>
+	</div>
+</MainGridLayout>

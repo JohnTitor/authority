@@ -16,6 +16,10 @@ export const LinkPresets: { [key in LinkPreset]: NavBarLink } = {
 		name: i18n(I18nKey.archive),
 		url: "/archive/",
 	},
+	[LinkPreset.Sponsors]: {
+		name: i18n(I18nKey.sponsors),
+		url: "/sponsors/",
+	},
 };
 
 export function getLocalizedLinkPresets(locale?: string): {
@@ -35,6 +39,10 @@ export function getLocalizedLinkPresets(locale?: string): {
 		[LinkPreset.Archive]: {
 			name: t ? t[I18nKey.archive] : i18n(I18nKey.archive),
 			url: getLocalizedUrl("/archive/", locale),
+		},
+		[LinkPreset.Sponsors]: {
+			name: t ? t[I18nKey.sponsors] : i18n(I18nKey.sponsors),
+			url: getLocalizedUrl("/sponsors/", locale),
 		},
 	};
 }
