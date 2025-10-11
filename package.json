@@ -12,6 +12,7 @@
     "type-check": "tsc --noEmit --isolatedDeclarations",
     "new-post": "node scripts/new-post.js",
     "update-zenn": "node scripts/update-zenn-articles.js",
+    "fetch-sponsors": "node scripts/fetch-sponsors.js",
     "format": "biome format --write ./src",
     "lint": "biome check --write ./src",
     "test": "playwright test",
