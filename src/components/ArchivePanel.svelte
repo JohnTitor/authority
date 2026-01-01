@@ -5,14 +5,11 @@ import I18nKey from "../i18n/i18nKey";
 import { i18n } from "../i18n/translation";
 import { getPostUrlById } from "../utils/url-utils";
 
-export let tags: string[];
-export let categories: string[];
+export let tags: string[] = [];
+export let categories: string[] = [];
 export let sortedPosts: Post[] = [];
 
-const params = new URLSearchParams(window.location.search);
-tags = params.has("tag") ? params.getAll("tag") : [];
-categories = params.has("category") ? params.getAll("category") : [];
-const uncategorized = params.get("uncategorized");
+let uncategorized: string | null = null;
 
 interface Post {
 	id: string;
@@ -45,6 +42,11 @@ function formatTag(tagList: string[]) {
 }
 
 onMount(async () => {
+	const params = new URLSearchParams(window.location.search);
+	tags = params.has("tag") ? params.getAll("tag") : [];
+	categories = params.has("category") ? params.getAll("category") : [];
+	uncategorized = params.get("uncategorized");
+
 	let filteredPosts: Post[] = sortedPosts;
 
 	if (tags.length > 0) {

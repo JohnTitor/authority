@@ -1,10 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
 import { navBarConfig, siteConfig } from "../config";
-import {
-	getLocalizedLinkPresets,
-	LinkPresets,
-} from "../constants/link-presets";
+import { getLocalizedLinkPresets } from "../constants/link-presets";
 import { LinkPreset, type NavBarLink } from "../types/config";
 import { getCurrentLocale, url } from "../utils/url-utils";
 import LangSwitch from "./LangSwitch.svelte";
