@@ -40,7 +40,7 @@ importers:
         version: 5.2.9
       '@iconify-json/line-md':
         specifier: ^1.2.8
-        version: 1.2.11
+        version: 1.2.13
       '@iconify-json/material-symbols':
         specifier: ^1.2.24
         version: 1.2.50
@@ -1061,8 +1061,8 @@ packages:
   '@fontsource-variable/noto-sans-jp@5.2.9':
     resolution: {integrity: sha512-osPL5f7dvGDjuMuFwDTGPLG37030D8X5zk+3BWea6txAVDFeE/ZIrKW0DY0uSDfRn9+NiKbiFn/2QvZveKXTog==}
 
-  '@iconify-json/line-md@1.2.11':
-    resolution: {integrity: sha512-JYczKuKvTq/Pf9rSCoxwdBbAiWqceNrb3EtM3acD4YkzCAdp3co+CdNE/pb5lTURGbIA9GrGuqentHqVwXyVWA==}
+  '@iconify-json/line-md@1.2.13':
+    resolution: {integrity: sha512-XFXThXsEQ2Wzzn+ze2T1d+JHkkFvI1AxiVKnOox4qFbdR9EVikckZlUK+/DUsV4zSy6pMQAgXpIk+1xG8qFYPQ==}
 
   '@iconify-json/material-symbols@1.2.50':
     resolution: {integrity: sha512-71tjHR70h46LHtBFab3fAd2V/wPTO7JMV5lKnRn3IcF303LaFgAlO0BZeTJDcmCv9d0snRZmnoLZAJVD7/eisw==}
@@ -6309,7 +6309,7 @@ snapshots:
 
   '@fontsource-variable/noto-sans-jp@5.2.9': {}
 
-  '@iconify-json/line-md@1.2.11':
+  '@iconify-json/line-md@1.2.13':
     dependencies:
       '@iconify/types': 2.0.0
 
