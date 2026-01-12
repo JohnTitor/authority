@@ -1,7 +1,7 @@
 ---
 published: 2025-01-18
 title: 'The state of @JohnTitor, 2024'
-tags: ['report', 'japanese']
+tags: ['report']
 description: 'The state of @JohnTitor, 2024'
 category: 'report'
 image: ''
